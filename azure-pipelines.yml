@@ -19,6 +19,7 @@ steps:
 
   - script: |
       gem install bundler
+      bundle install
       bundle exec middleman build --clean
       find .
     displayName: 'Build Docs'
