@@ -1,0 +1,24 @@
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-20.04
+
+steps:
+  - task: UseRubyVersion@0
+    inputs:
+      versionSpec: '>= 2.4'
+      addToPath: true
+    displayName: 'Install Ruby 2.4'
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
+
+
+  - script: |
+      bundle exec middleman build --clean
+      find .
+    displayName: 'Build Docs'
+
