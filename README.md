@@ -24,11 +24,15 @@ The content of the `source/` directory are processed by [Slate Docs](https://git
 run: 
 
 ```
-# either run this to run locally
 bundle install
 ```
 
 ## Running development server
 
+run:
+
+```
 bundle exec middleman server
+```
+
 
