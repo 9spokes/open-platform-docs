@@ -15,7 +15,7 @@ includes:
   - accounting/account-balance
   - accounting/tax-rates
   - accounting/bills
-
+  - accounting/organisation
 
 search: true
 
