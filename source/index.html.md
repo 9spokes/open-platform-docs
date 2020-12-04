@@ -16,6 +16,9 @@ includes:
   - accounting/tax-rates
   - accounting/bills
   - accounting/organisation
+  - pos/index
+  - pos/product
+  - pos/stockItems
 
 search: true
 
