@@ -11,7 +11,7 @@ toc_footers:
 includes:
   - accounting/index
   - accounting/timeline-balances
-  - accounting/goods-services-transaction
+  # - accounting/goods-services-transaction
   - accounting/account-balance
   - accounting/tax-rates
   - accounting/bills
