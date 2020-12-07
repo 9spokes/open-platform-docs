@@ -4,7 +4,7 @@ This is the specification for thebillss of a user. It is in JSON format and the 
 
 ### Field Description
 
-> Below is the schema definition for a `account-balance` record
+> Below is the schema definition for a `bills` record
 
 
 ```json
@@ -123,7 +123,7 @@ This is the specification for thebillss of a user. It is in JSON format and the 
 }
 ```
 
-Below is the metadata wrapper used to classify and search account balance data. The account balance data is stored under the `data` key.
+Below is the metadata wrapper used to classify and search bills data. The bills data is stored under the `data` key.
 
 | Field                    | Data Type               | Description                                                                                                  |
 | :----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |

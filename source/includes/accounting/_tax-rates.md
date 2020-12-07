@@ -59,26 +59,26 @@ This is the specification for the Tax Rates of business . It is in JSON format a
 }
 ```
 
-| Field                    | Data Type               | Description                                                                                                  |
-| :----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `user`                   | `UUIDv4`                | This is the user's id of the company that this transaction belongs to.                                       |
-| `company`                | `UUIDv4`                | The company id                                                                                               |
-| `datasource`             | `string`                |                                                                                                              |
-| `connection_id`          | `UUIDv4`                | This is the connection_id which was used to retrieve the origin data.                                        |
-| `object_class`           | `rates`       | This is used to retrieve a specific type of data schema:                                                               |
-| `object_category`        | `general-ledger`        | This is used to categorise the document.                                                                     |
-| `object_type`            | `day` or `month`        | This is the associated time dimension of the metric.                                                         |
+| Field                    | Data Type               | Description                                                                                    |
+| :----------------------- | ----------------------- | ---------------------------------------------------------------------------------------------- |
+| `user`                   | `UUIDv4`                | This is the user's id of the company that this transaction belongs to.                         |
+| `company`                | `UUIDv4`                | The company id                                                                                 |
+| `datasource`             | `string`                |                                                                                                |
+| `connection_id`          | `UUIDv4`                | This is the connection_id which was used to retrieve the origin data.                          |
+| `object_class`           | `rates`                 | This is used to retrieve a specific type of data schema:                                       |
+| `object_category`        | `general-ledger`        | This is used to categorise the document.                                                       |
+| `object_type`            | `day` or `month`        | This is the associated time dimension of the metric.                                           |
 | `object_origin_category` | `bookkeeping`           | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
-| `object_origin_type`     | `accounting`            | This is the specific type of origin related to the origin category                                           |
-| `object_origin`          | `string`                | This is the name of the application which matches the app-key in the connection records.                     |
-| `object_origin`          | `string`                | This is the name of the application which matches the app-key in the connection records.                     |
-| `object_creation_date`   | `Date`                  | Creation time of document                                                                                    |
-| `data`                   | Tax Rate Array of objects | The actual timeline balance data, see below                                                                |
+| `object_origin_type`     | `accounting`            | This is the specific type of origin related to the origin category                             |
+| `object_origin`          | `string`                | This is the name of the application which matches the app-key in the connection records.       |
+| `object_origin`          | `string`                | This is the name of the application which matches the app-key in the connection records.       |
+| `object_creation_date`   | `Date`                  | Creation time of document                                                                      |
+| `data`                   | Tax Rate Array of objects | The actual timeline balance data, see below                                                  |
 
 Below is the content of the `data` object used with `tax-rates`.
 
-| Field                | Data Type              | Description                                                                                                               |
-| :------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------|
-| `tax_id`             | `string`               | Tax ID                                                                                                                    |
-| `tax_name`           | `string`               | Tax name                                                                                                                  |
-| `tax_rate`           | `number`               | The value of the tax                                                                                                      |
+| Field                | Data Type              | Description                       |
+| :------------------- | ---------------------- | ----------------------------------|
+| `tax_id`             | `string`               | Tax ID                            |
+| `tax_name`           | `string`               | Tax name                          |
+| `tax_rate`           | `number`               | The value of the tax              |

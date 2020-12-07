@@ -4,7 +4,7 @@ This is the specification for the organisation of a user. It is in JSON format a
 
 ### Field Description
 
-> Below is the schema definition for a `timeline-balance` record
+> Below is the schema definition for a `organisation` record
 
 ```json
 {
@@ -44,7 +44,7 @@ This is the specification for the organisation of a user. It is in JSON format a
 > Below is a sample document
 
 ```json
-{{
+{
     "user": "0c529257-a362-43ef-ae3a-9c9ecf583fbd",
     "company": "56728df1-58bf-48eb-9302-406b7f4a2489",
     "datasource": "organisation",
@@ -60,23 +60,20 @@ This is the specification for the organisation of a user. It is in JSON format a
     "application_settings" : {
         "sales_tax_period" : "QUARTERLY1",
         "subscription_start" : "/Date(1603925122000)/",
-        "accounting_method" : "UNKNOWN",
+        "accounting_method" : "Accrue",
         "base_currency" : "AUD",
         "business_type" : "IT",
-        "trial_balance_history_available" : true,
-        "invoices_history_available" : true,
-        "payments_history_available" : true,
-        "trial_balance_daily_history_daily_available" : true,
-        "business_identifier" : "NOT DISPLAYED",
-        "fyear_end_month" : 6.0,
+        "business_identifier" : "B0193783",
         "organisation_type" : "COMPANY",
         "short_code" : "!7YLwG",
         "trading_name" : "9spokestest",
         "country_code" : "AU",
+        "fyear_end_month" : 6.0,
         "fyear_end_day" : 30.0
     },
 }
 ```
+
 Below is the metadata wrapper used to classify and search timeline balance data. The timeline balance data is stored under the `data` key.
 
 | Field                    | Data Type               | Description                                                  |
@@ -94,17 +91,20 @@ Below is the metadata wrapper used to classify and search timeline balance data.
 | `object_creation_date`   | `Date`                  | Creation time of document                                    |
 | `data`                   | Timeline Balance Object | The actual timeline balance data, see below                  |
 
-Below is the content of the `data` object used with `timeline-balance`.
+Below is the content of the `data` object used with `organisation`.
 
-| Field                | Data Type              | Description                                                  |
-| :------------------- | :--------------------- | :----------------------------------------------------------- |
-| `account_identifier` | `string`               | Account ID                                                   |
-| `account_name`       | `string`               | Account name                                                 |
-| `account_code`       | `string`               | The chart of accounts code                                   |
-| `account_type`       | `string`               | Type of the account, possible values are `bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term` |
-| `account_category`   | `string`               | The category of account this is. Must be one of `assets`, `equity`, `expense`, `liability`, `revenue` |
-| `account_currency`   | `string[3]`            | Currency of the account                                      |
-| `account_status`     | `ACTIVE` or `INACTIVE` | Whether the account is active or not                         |
-| `value_type`         | `debit` or `credit`    | Debit/Credit                                                 |
-| `total_value`        | `number`               | The value of the account                                     |
-
+| Field                      | Data Type        | Description                                                  |
+| :------------------------- | :--------------- | :----------------------------------------------------------- |
+| `sales_tax_period`         | `string`         | Sales Tax Period                                             |
+| `subscription_start`       | `string`         | Subscription state date                                      |
+| `accounting_method`        | `string`         | Accounting method                                            |
+| `base_currency`            | `string[3]`      | Currency                                                     |
+| `business_type`            | `string`         | Business type                                                |
+| `account_currency`         | `string[3]`      | Currency of the account                                      |
+| `business_identifier`      | `string`         | Business number                                              |
+| `organisation_type`        | `string`         | Organisation type                                            |
+| `short_code`               | `string`         | Short code                                                   |
+| `trading_name`             | `string`         | Trading name                                                 |
+| `country_code`             | `string[2]`      | Country code                                                 |
+| `fyear_end_month`          | `number`         | Financial year end month                                     |
+| `fyear_end_day`            | `number`         | Financial year end day of the month                          |
