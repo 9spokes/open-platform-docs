@@ -12,10 +12,13 @@ includes:
   - accounting/index
   - accounting/timeline-balances
   # - accounting/goods-services-transaction
-  - accounting/account-balance
+  - accounting/bank-accounts
+  - accounting/contacts
   - accounting/tax-rates
   - accounting/bills
   - accounting/organisation
+  - hr/index
+  - hr/leaves
   - pos/index
   - pos/product
   - pos/stockItems

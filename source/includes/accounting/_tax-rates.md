@@ -1,4 +1,4 @@
-### Tax Rates
+## Tax Rates
 
 This is the specification for the Tax Rates of business . It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform.
 
