@@ -19,6 +19,8 @@ includes:
   - accounting/organisation
   - hr/index
   - hr/leaves
+  - hr/pay-run-summary
+  - hr/staff-wages
   - pos/index
   - pos/product
   - pos/stockItems
