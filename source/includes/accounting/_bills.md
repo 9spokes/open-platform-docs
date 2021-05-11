@@ -1,85 +1,14 @@
 ## Bills
 
-This is the specification for thebillss of a user. It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform.
+This is the specification for the bills of a user. 
 
-### Field Description
-
-> Below is the schema definition for a `bills` record
-
-
-```json
-{
-    "connection_id" : "string",
-    "user" : "string",
-    "company" : "string",
-    "datasource" : "string",
-    "osp" : "string",
-    "type" : "string",
-    "updated" : "string",
-    "index" : "string",
-    "cycle" : "string",
-    "object_origin_category" : "string",
-    "object_origin_type" : "string",
-    "object_origin" : "string",
-    "object_creation_date" : "string",
-    "object_class" : "string",
-    "object_type" : "string",
-    "object_category" : "string",
-    "currency" : "string",
-    "data" : {
-        "currency_rate" : "number",
-        "transaction_paid_date" : "string",
-        "transaction_outstanding_amount" : "number",
-        "transaction_gross_value" : "number",
-        "transaction_net_value" : "number",
-        "transaction_tax_value" : "number",
-        "transaction_date" : "string",
-        "transaction_due_date" : "string",
-        "transaction_reference" : "string",
-        "transaction_currency" : "string[3]",
-        "transaction_status" : "string",
-        "line_items" : [
-            {
-                "product_name" : "string",
-                "item_category" : "string",
-                "item_type" : "string",
-                "item_quantity" : "number",
-                "item_identifier" : "string",
-                "item_net_unit_sale_value" : "number",
-                "item_price_list_reference" : "string",
-                "item_total_net_value" : "number",
-                "item_total_tax_value" : "number",
-                "item_total_gross_value" : "number",
-                "item_unit_tax_value" : "number",
-                "system_id" : "string"
-            }
-        ]
-    }
-}
 ```
 
 > Below is a sample document
 
 ```json
 {
-    "connection_id" : "f4592653-7c08-4722-8920-c280c95991d7",
-    "user" : "08da4bfe-a8df-4729-82af-36726a18e746",
-    "company" : "7af2b057-0ac5-4818-9d50-0c48006985d5",
-    "datasource" : "purchases",
-    "osp" : "sageone",
-    "type" : "bill",
-    "updated" : "2020-10-30T01:56:48Z",
-    "index" : "47e112b2fa49e8219d2118ee3ef8bb2b",
-    "cycle" : "day",
-    "object_origin_category" : "bookkeeping",
-    "object_origin_type" : "accounting",
-    "object_origin" : "sageone",
-    "object_creation_date" : "2020-10-30T01:56:48.195Z",
-    "object_class" : "goods-service-transaction",
-    "object_type" : "bill",
-    "object_category" : "purchase-transaction",
-    "currency" : "GBP",
-    "data" : {
+    "bills_data" : {
         "currency_rate" : 1.0,
         "transaction_paid_date" : "2020-10-12T00:00:00.000Z",
         "transaction_outstanding_amount" : 1806.0,
@@ -123,26 +52,7 @@ This is the specification for thebillss of a user. It is in JSON format and the 
 }
 ```
 
-Below is the metadata wrapper used to classify and search bills data. The bills data is stored under the `data` key.
-
-| Field                    | Data Type               | Description                                                                                                  |
-| :----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `user`                   | `UUIDv4`                | This is the user's id of the company that this transaction belongs to.                                       |
-| `company`                | `UUIDv4`                | The company id                                                                                               |
-| `datasource`             | `string`                |                                                                                                              |
-| `connection_id`          | `UUIDv4`                | This is the connection_id which was used to retrieve the origin data.                                        |
-| `object_class`           | `goods-service-transaction`       | This is used to retrieve a specific type of data schema:                                           |
-| `object_category`        | `purchase-transaction`  | This is used to categorise the document.                                                                     |
-| `object_type`            | `bill`                  | This is the associated time dimension of the metric.                                                         |
-| `object_origin_category` | `bookkeeping`           | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
-| `object_origin_type`     | `accounting`            | This is the specific type of origin related to the origin category                                           |
-| `object_origin`          | `string`                | This is the name of the application which matches the app-key in the connection records.                     |
-| `balance_date`           | `Date`                  | The account balance's date                                                                                   |
-| `currency`               | `string[3]`             | Currency of data                                                                                             |
-| `object_creation_date`   | `Date`                  | Creation time of document                                                                                    |
-| `data`                   | Purchase Transaction Object | The actual timeline balance data, see below                                                              |
-
-Below is the content of the `data` object used with `purchase-transaction`.
+### Below is the content of the `data` object used with `purchase-transaction`.
 
 | Field                | Data Type              | Description                                                                                                 |
 | :------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------|
@@ -158,7 +68,7 @@ Below is the content of the `data` object used with `purchase-transaction`.
 | `transaction_status` | `string` | Transaction status e.g. PAID/UNPAID |
 | `line_items` | `string` | Line items of the bills. See below |
 
-Below is the content of the `line_items` object used with `purchase-transaction`.
+### Below is the content of the `line_items` object used with `purchase-transaction`.
 
 | Field                | Data Type              | Description                                                                                                 |
 | :------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------|
