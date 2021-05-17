@@ -17,6 +17,7 @@ includes:
   - accounting/tax-rates
   - accounting/bills
   - accounting/organisation
+  - accounting/cards
   - hr/index
   - hr/leaves
   - hr/pay-run-summary
@@ -24,9 +25,15 @@ includes:
   - pos/index
   - pos/product
   - pos/stockItems
+  - social_marketing/index
+  - social_marketing/social-marketing
+  - email_marketing/index
+  - email_marketing/email-marketing
+  - web_analytics/index
+  - web_analytics/web-analytics
 
 search: true
-
+  
 code_clipboard: true
 ---
 
