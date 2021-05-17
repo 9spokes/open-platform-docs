@@ -1,6 +1,6 @@
 ## Email Marketing
 
-Email Marketing data is gathered from apps like MailChimp and ConstantContact. This will allow you to analyse performance of your email campaigns
+Email Marketing data simplifies the analysis of performance of email campaigns
 
 > Below is a sample document for a `Email Marketing` record
 
