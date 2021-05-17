@@ -1,1 +1,1 @@
-# Human resources
+# HR and Payroll

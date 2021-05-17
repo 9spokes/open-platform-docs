@@ -25,10 +25,12 @@ includes:
   - pos/index
   - pos/product
   - pos/stockItems
- # - social_marketing/index
- # - social_marketing/social-marketing
- # - email_marketing/index
- # - email_marketing/email-marketing
+  - social_marketing/index
+  - social_marketing/social-marketing
+  - email_marketing/index
+  - email_marketing/email-marketing
+  - web_analytics/index
+  - web_analytics/web-analytics
 
 search: true
   
