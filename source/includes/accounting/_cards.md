@@ -1,7 +1,5 @@
 ## Cards
 
-> Below is a sample document
-
 ```json
 {
   "card_data": [
@@ -24,12 +22,12 @@
 
 | Field                   | Data Type | Description                                                           |
 | :---------------------- | :-------- | :-------------------------------------------------------------------- |
-| `account_number`        | `string`  | Account number associated with the card retrieved from the extraction |
-| `account_spend_limit`   | `string`  | The spending limit on the account                                     |
-| `card_holder_id`        | `string`  | The unique id for the card holder                                     |
-| `cardholder_first_name` | `string`  | Card holder's first name                                              |
-| `cardholder_last_name`  | `string`  | Cardholder's last name                                                |
-| `company_id`            | `string`  | Company id associated to the card                                     |
-| `account_open_date`     | `date`    | Date when the account associated to the card was open                 |
-| `account_close_date`    | `date`    | Date when the account associated to the card was closed               |
-| `card_expiry_date`      | `date`    | Card expiry date                                                      |
+| **account_number**        | *string*  | Account number associated with the card retrieved from the extraction |
+| **account_spend_limit**   | *string*  | The spending limit on the account                                     |
+| **card_holder_id**        | *string*  | The unique id for the card holder                                     |
+| **cardholder_first_name** | *string*  | Card holder's first name                                              |
+| **cardholder_last_name**  | *string*  | Cardholder's last name                                                |
+| **company_id**            | *string*  | Company id associated to the card                                     |
+| **account_open_date**     | *date*    | Date when the account associated to the card was open                 |
+| **account_close_date**    | *date*    | Date when the account associated to the card was closed               |
+| **card_expiry_date**      | *date*    | Card expiry date                                                      |

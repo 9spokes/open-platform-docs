@@ -4,8 +4,6 @@ This is the specification for the Stock Items. It is in JSON format and the meta
 
 ### Field Description
 
-> Below is the schema definition for a `Stock items` record
-
 ```json
 {
   "user": "string",
@@ -33,8 +31,6 @@ This is the specification for the Stock Items. It is in JSON format and the meta
   ]
 }
 ```
-
-> Below is a sample document
 
 ```json
 {
@@ -68,27 +64,27 @@ Below is the metadata wrapper used to classify and search stock items data. The 
 
 | Field                    | Data Type        | Description                                                  |
 | :----------------------- | :--------------- | :----------------------------------------------------------- |
-| `user`                   | `UUIDv4`         | This is the user's id of the company that this transaction belongs to. |
-| `company`                | `UUIDv4`         | The company id                                               |
-| `datasource`             | `string`         | The datasource name                                          |
-| `connection_id`          | `UUIDv4`         | This is the connection_id which was used to retrieve the origin data. |
-| `object_class`           | `string`         | This is used to retrieve a specific type of data schema:     |
-| `object_category`        | `string`         | This is used to categorise the document.                     |
-| `object_type`            | `string`         | This is the associated time dimension of the metric.         |
-| `object_origin_category` | `string`         | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
-| `object_origin_type`     | `string`         | This is the specific type of origin related to the origin category |
-| `object_origin`          | `string`         | This is the name of the application which matches the app-key in the connection records. |
-| `object_creation_date`   | `Date`           | Creation time of document                                    |
-| `data`                   | `Array of stock item objects` | The actual product data, see below                           |
+| **user**                   | *UUIDv4*         | This is the user's id of the company that this transaction belongs to. |
+| **company**                | *UUIDv4*         | The company id                                               |
+| **datasource**             | *string*         | The datasource name                                          |
+| **connection_id**          | *UUIDv4*         | This is the connection_id which was used to retrieve the origin data. |
+| **object_class**           | *string*         | This is used to retrieve a specific type of data schema:     |
+| **object_category**        | *string*         | This is used to categorise the document.                     |
+| **object_type**            | *string*         | This is the associated time dimension of the metric.         |
+| **object_origin_category** | *string*         | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
+| **object_origin_type**     | *string*         | This is the specific type of origin related to the origin category |
+| **object_origin**          | *string*         | This is the name of the application which matches the app-key in the connection records. |
+| **object_creation_date**   | *date*           | Creation time of document                                    |
+| **data**                   | Array of stock item objects | The actual product data, see below                           |
 
 Below is the content of the `data` object used with `stock items`.
 
 | Field                          | Data Type | Description                                         |
 | :----------------------------- | :-------- | :-------------------------------------------------- |
-| `item_id`                      | `string`  | The specific stock item id related to the product   |
-| `item_name`                    | `string`  | The specific stock item name related to the product |
-| `active`                       | `boolean` | The item has stock values                           |
-| `item_quantity`                | `number`  | The units of stock items available for sale         |
-| `item_cost_price`              | `number`  | The unit cost of the stock item                     |
-| `item_sale_price_includes_tax` | `boolean` | The item sale price includes tax                    |
-| `tax_rate_id`                  | `string`  | The specific tax rate id related to the stock item  |
+| **item_id**                      | *string*  | The specific stock item id related to the product   |
+| **item_name**                    | *string*  | The specific stock item name related to the product |
+| **active**                       | *boolean* | The item has stock values                           |
+| **item_quantity**                | *number*  | The units of stock items available for sale         |
+| **item_cost_price**              | *number*  | The unit cost of the stock item                     |
+| **item_sale_price_includes_tax** | *boolean* | The item sale price includes tax                    |
+| **tax_rate_id**                  | *string*  | The specific tax rate id related to the stock item  |

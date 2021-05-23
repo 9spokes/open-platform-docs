@@ -2,8 +2,6 @@
 
 A contact is a person or organisation that associated with your business. 
 
-> Below is a sample document
-
 ```json
 {
     "contacts": [
@@ -66,6 +64,4 @@ A contact is a person or organisation that associated with your business.
 | **postal_code** | *array*   | Postal code for the contact address                                                          |
 | **line1**       | *array*   | Line 1 of the contact address                                                                |
 | **line1**       | *array*   | Line 2 of the contact address                                                                |
-
-
 

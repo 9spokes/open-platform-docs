@@ -2,8 +2,6 @@
 
 A leave is a time-off requested to a specific company by a employee.
 
-> Below is a sample document
-
 ```json
 { 
     "leaves": [
@@ -58,7 +56,3 @@ A leave is a time-off requested to a specific company by a employee.
 | **employee_id**     | *string*         | The unique identifer of the employee applied for the leave                                                     |
 | **employee_name**   | *string*         | Name of the employee applied for the leave                                                                     |
 | ***dates***         | *array of dates* | Corresponding dates for the leave                                                                              |
-
-
-
-

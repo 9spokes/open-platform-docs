@@ -2,8 +2,6 @@
 
 Staff wages is the record of pay run categorised by employment type .
 
-> Below is a sample document
-
 ```json
 { 
     "staff_wages": [
@@ -29,16 +27,9 @@ Staff wages is the record of pay run categorised by employment type .
 
 ### Data schema
 
-### Data schema
-
 | Field               | Data Type | Description                                                                                                                 |
 |---------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------|
 | **employment_type** | *string*  | Types of employment <ul><li>`FULL-TIME`</li><li>`PART-TIME`</li><li>`CONTRACTOR`</li><li>`INTERN`</li><li>`OTHER`</li></ul> |
 | **gross_pay**       | *string*  | The amount of money paid                                                                                                    |
 | **date**            | *date*    | Payment date                                                                                                                |
-
-
-
-
-
 

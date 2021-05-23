@@ -2,8 +2,6 @@
 
 A timeline/trial balance is a list of all the general ledger accounts contained in the ledger of a business.
 
-> Below is a sample document
-
 ```json
 
 "trial_balance": {
@@ -50,12 +48,12 @@ A timeline/trial balance is a list of all the general ledger accounts contained 
 
 | Field                | Data Type              | Description                                                                                                                   |
 | :------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `account_identifier` | `string`               | Account ID                                                                                                                    |
-| `account_name`       | `string`               | Account name                                                                                                                  |
-| `account_code`       | `string`               | The chart of accounts code                                                                                                    |
-| `account_type`       | `string`               | Type of the account, possible values are `bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term` |
-| `account_category`   | `string`               | The category of account this is. Must be one of `assets`, `equity`, `expense`, `liability`, `revenue`                         |
-| `account_currency`   | `string[3]`            | Currency of the account                                                                                                       |
-| `status`             | `ACTIVE` or `INACTIVE` | Whether the account is active or not                                                                                          |
-| `value_type`         | `debit` or `credit`    | Debit/Credit                                                                                                                  |
-| `total_value`        | `number`               | The value of the account                                                                                                      |
+| **account_identifier** | *string*               | Account ID                                                                                                                    |
+| **account_name**       | *string*               | Account name                                                                                                                  |
+| **account_code**       | *string*               | The chart of accounts code                                                                                                    |
+| **account_type**       | *string*               | Type of the account, possible values are `bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term` |
+| **account_category**   | *string*               | The category of account this is. Must be one of `assets`, `equity`, `expense`, `liability`, `revenue`                         |
+| **account_currency**   | *string[3]*            | Currency of the account                                                                                                       |
+| **status**             | `ACTIVE` or `INACTIVE` | Whether the account is active or not                                                                                          |
+| **value_type**         | `debit` or `credit`    | Debit/Credit                                                                                                                  |
+| **total_value**        | *number*               | The value of the account                                                                                                      |

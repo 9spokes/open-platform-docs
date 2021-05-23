@@ -2,8 +2,6 @@
 
 Summarized pay run of different periods.
 
-> Below is a sample document
-
 ```json
 { 
     "pay_run_summary": [
@@ -35,8 +33,4 @@ Summarized pay run of different periods.
 | **end_date**   | *date*  | End date of the pay period
 | **hours**      | *number*    | Total number of work hours recorded for that period                                                                                               |
 | **gross_pay**  | *number*    | The amount of money paid to employees for that period                                                                                                    |
-
-
-
-
 

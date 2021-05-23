@@ -2,8 +2,6 @@
 
 Bank accounts is a list of real-life bank accounts from a connected app platform for the associated business.
 
-> Below is a sample document
-
 ```json
 {
     "balance_date": "2020-11-02T00:00:00.000Z",
@@ -39,6 +37,3 @@ Bank accounts is a list of real-life bank accounts from a connected app platform
 | **name**          | *string*  | Name of the bank account in the platform                   |
 | **status**        | *string*  | Status of the bank account                                 |
 | **total_balance** | *number*  | The total balance of the bank account as of `balance_date` |
-
-
-

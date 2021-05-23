@@ -10,14 +10,14 @@ toc_footers:
 
 includes:
   - accounting/index
+  - accounting/bank-accounts
+  - accounting/bills
+  - accounting/cards
+  - accounting/contacts
   - accounting/timeline-balances
   # - accounting/goods-services-transaction
-  - accounting/bank-accounts
-  - accounting/contacts
   - accounting/tax-rates
-  - accounting/bills
   - accounting/organisation
-  - accounting/cards
   - hr/index
   - hr/leaves
   - hr/pay-run-summary
