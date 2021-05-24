@@ -1,4 +1,4 @@
-## Bank accounts
+## Bank Accounts
 
 Bank accounts is a list of real-life bank accounts from a connected app platform for the associated business.
 

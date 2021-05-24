@@ -281,7 +281,7 @@ html, body {
   display: flex;
   background-color: $lang-select-bg;
   width: 100%;
-  font-weight: bold;
+  // font-weight: bold;
   overflow-x: auto;
   a {
     display: inline;
@@ -299,6 +299,7 @@ html, body {
     &.active {
       background-color: $lang-select-active-bg;
       color: $lang-select-active-text;
+      font-weight: bold;
     }
   }
 
@@ -637,6 +638,8 @@ html, body {
   @extend %code-font;
   padding: 2px 5px;
   border-radius: 5px;
+  margin-right: 5px;
+  
   &-get {
     background-color: rgb(47, 129, 50);
     color: white;
@@ -644,4 +647,29 @@ html, body {
       content: "GET";
     }
   }
+  
+  &-post {
+    background-color: rgba(255, 214, 32, 0.753);
+    color: $main-text;
+    &::after {
+      content: "POST";
+    }
+  }
+
+  &-put {
+    background-color: rgb(34, 77, 194);
+    color: white;
+    &::after {
+      content: "PUT";
+    }
+  }
+
+  &-delete {
+    background-color: rgb(194, 34, 34);
+    color: white;
+    &::after {
+      content: "DELETE";
+    }
+  }
+
 }

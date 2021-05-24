@@ -10,6 +10,8 @@ toc_footers:
   - <a href='https://www.9spokes.com/terms-and-conditions'>Terms of Use</a>
 
 includes:
+  - companies/index
+  - connections/index
   - accounting/index
   - accounting/bank-accounts
   - accounting/bills
@@ -103,21 +105,23 @@ All API responses adhere to a strict JSON data format making it easy for App dev
 
 HTTP status codes are used to further categorise the response.  The table below denotes all the supported HTTP response codes.
 
-HTTP Code  | Meaning | Corrective Action
----------- | ------- | ------------------
-**200** | *OK* | The request was processed successfully
-**400** | *Bad Request* | The request is invalid, check the format of your request and try again
-**401** | *Unauthorized* | The API key is not accepted.
-**403** | *Forbidden* | The request is denied though the API key may be valid.
-**404** | *Not Found* | The specified resource does not exist
-**405** | *Method Not Allowed* | Only the documented HTTP verbs are supported
-**429** | *Too Many Requests* | You have hit a rate limit, reduce your request rate
-**500** | *Internal Server Error* | An internal error has occured processing your request
-**503** | *Service Unavailable* | The API is temporarily unavailable
+| HTTP Code | Meaning                 | Corrective Action                                                      |
+| --------- | ----------------------- | ---------------------------------------------------------------------- |
+| **200**   | *OK*                    | The request was processed successfully                                 |
+| **400**   | *Bad Request*           | The request is invalid, check the format of your request and try again |
+| **401**   | *Unauthorized*          | The API key is not accepted.                                           |
+| **403**   | *Forbidden*             | The request is denied though the API key may be valid.                 |
+| **404**   | *Not Found*             | The specified resource does not exist                                  |
+| **405**   | *Method Not Allowed*    | Only the documented HTTP verbs are supported                           |
+| **429**   | *Too Many Requests*     | You have hit a rate limit, reduce your request rate                    |
+| **500**   | *Internal Server Error* | An internal error has occured processing your request                  |
+| **503**   | *Service Unavailable*   | The API is temporarily unavailable                                     |
 
 ### Success Response
 
 Successful responses yield an HTTP status code of `200` and a JSON body similar to the structure below:
+
+> A typical success response
 
 ```json
 {
@@ -136,7 +140,9 @@ The `status` key is set to `ok` and the `details` key is present.
 
 ### Error Response
 
-API requests that could not be processed will carry an HTTP code that is greater than `399` and a body similar to the structure below:
+API requests that could not be processed will carry an HTTP code that is greater than `399` and a body similar to the structure shown here.
+
+> An error response.  `message` contains the error string
 
 ```json
 {
@@ -148,6 +154,10 @@ API requests that could not be processed will carry an HTTP code that is greater
 The `message` key is always a string explaining the nature of the problem that was encountered.
 
 ### Metadata
+
+Any data responses excluding `companies` and `connections` will have an outermost envelope around the data describing the nature and content of that particular record.  This _metadata_ is comprised of common keys and contextual keys.  The common keys are described in the table below and can be used to quickly classify the data.
+
+
 
 ## Data Relationship
 
