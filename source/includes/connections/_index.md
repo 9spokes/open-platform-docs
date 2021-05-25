@@ -50,6 +50,8 @@ Creating a new connection for a given company is done using a `POST` request to 
 | **company** | Path     | *string* | The ID of the company          |
 | **app**     | Form     | *string* | The name of the App to connect |
 
+The `authorize_url` key in the response should be used to redirect the user agent.
+
 ## List Connections
 
 > Fetch all connections for company ID `9091a260-1292-4874-bbe5-3693a341d332`

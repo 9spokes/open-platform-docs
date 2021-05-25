@@ -10,10 +10,10 @@ toc_footers:
   - <a href='https://www.9spokes.com/terms-and-conditions'>Terms of Use</a>
 
 includes:
+  - organisation/index
   - companies/index
   - connections/index
   - accounting/index
-  - accounting/bank-accounts
   - accounting/bills
   - accounting/cards
   - accounting/contacts
@@ -21,6 +21,8 @@ includes:
   # - accounting/goods-services-transaction
   - accounting/tax-rates
   - accounting/organisation
+  - banking/index
+  - banking/accounts
   - hr/index
   - hr/leaves
   - hr/pay-run-summary
