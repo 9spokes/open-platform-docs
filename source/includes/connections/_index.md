@@ -22,6 +22,7 @@ Connections transition through several preset stages as the end-user creates, co
 $ curl https://${API_ROOT}/companies/9091a260-1292-4874-bbe5-3693a341d332/connections \
     -X POST \
     -d "app=sage" \
+    -H "Content-type: application/x-www-form-urlencoded" \
     -H "Authorization: ${API_KEY}"
 ```
 

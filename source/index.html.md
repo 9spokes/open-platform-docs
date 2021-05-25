@@ -11,6 +11,8 @@ toc_footers:
 
 includes:
   - organisation/index
+  - organisation/redirect
+  - organisation/apps
   - companies/index
   - connections/index
   - accounting/index

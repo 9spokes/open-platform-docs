@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 56 56" style="enable-background:new 0 0 56 56;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#E7E7EA;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{mask:url(#mask-2_1_);}
+</style>
+<g id="Logos-_x2F_-Icon-_x2F_-Podium">
+	<path class="st0" d="M53.1,0.5c0.69,0,1.32,0.28,1.77,0.73S55.6,2.31,55.6,3l0,0v50c0,0.69-0.28,1.32-0.73,1.77
+		c-0.45,0.45-1.08,0.73-1.77,0.73l0,0H3c-0.69,0-1.32-0.28-1.77-0.73C0.78,54.32,0.5,53.69,0.5,53l0,0V3c0-0.69,0.28-1.32,0.73-1.77
+		S2.31,0.5,3,0.5l0,0H53.1z"/>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="12.31" y="8.78" width="32" height="38">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="12.31" y="8.78" width="32" height="38" id="mask-2_1_">
+		<g class="st1">
+			<path id="path-1_1_" class="st2" d="M3,0h50.1c1.66,0,3,1.34,3,3v50c0,1.66-1.34,3-3,3H3c-1.66,0-3-1.34-3-3V3C0,1.34,1.34,0,3,0
+				z"/>
+		</g>
+	</mask>
+	<polygon id="Path" class="st3" points="12.31,8.78 12.31,31.17 23.27,46.78 35.97,46.78 29.32,31.17 44.31,31.17 44.31,8.78 	"/>
+</g>
+</svg>

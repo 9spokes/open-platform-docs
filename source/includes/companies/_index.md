@@ -11,6 +11,7 @@ A **Company** object represents a real business or organisation.  Companies are 
 $ curl https://${API_ROOT}/companies \
     -X POST \
     -d "name=9Socks" \
+    -H "Content-type: application/x-www-form-urlencoded" \
     -H "Authorization: ${API_KEY}"
 ```
 
