@@ -2,6 +2,15 @@
 
 Following is the data specification for a bill that is extracted from accounting/POS OSPs
 
+> Retrieving the list of bills for a connection is done by querying the `bills` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/bills \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of bills as seen below.
+
 ```json
 {
     "connection_id" : "52684382-abff-45fa-a3f2-ced175adfe61",
@@ -60,6 +69,12 @@ Following is the data specification for a bill that is extracted from accounting
 }
 ```
 
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/bills</code>
+
+The `bills` endpoint for a connection returns an array of bills.  Each record contains a *metadata* envelope and a `data` key.  The `data` key for bills is always an array of bills.
+
+Individual line items can be found for each bill under the `line_items` key.
+
 ### Metadata
 
 | Field             | Data Type        | Description                                         |
@@ -89,7 +104,7 @@ Following is the data specification for a bill that is extracted from accounting
 | **transaction_gross_value**        | *number*     | Total bill amount                                                                    |
 | **transaction_net_value**          | *number*     | Bill sub-total                                                                       |
 | **tax_amount**                     | *number*     | Total applied tax amount                                                             |
-| **line_items**                     | *LineItem[]* | The line items for this bill                                                         |
+| **line_items**                     | *LineItem[]* | An array of line items as defined below                                              |
 
 ### Line Item
 
