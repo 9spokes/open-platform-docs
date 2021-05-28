@@ -37,10 +37,10 @@ This is the specification for the Tax Rates of business . It is in JSON format a
 
 | Field                      | Data Type                 | Description                                                                                                  |
 | :------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **user**                   | *UUIDv4*                  | This is the user's id of the company that this transaction belongs to.                                       |
-| **company**                | *UUIDv4*                  | The company id                                                                                               |
+| **user**                   | *uuid*                    | This is the user's id of the company that this transaction belongs to.                                       |
+| **company**                | *uuid*                    | The company id                                                                                               |
 | **datasource**             | *string*                  |                                                                                                              |
-| **connection_id**          | *UUIDv4*                  | This is the connection_id which was used to retrieve the origin data.                                        |
+| **connection_id**          | *uuid*                    | This is the connection_id which was used to retrieve the origin data.                                        |
 | **object_class**           | `rates`                   | This is used to retrieve a specific type of data schema:                                                     |
 | **object_category**        | `general-ledger`          | This is used to categorise the document.                                                                     |
 | **object_type**            | `day` or `month`          | This is the associated time dimension of the metric.                                                         |

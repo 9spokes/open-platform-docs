@@ -119,6 +119,8 @@ $ curl https://${API_ROOT}/companies/9091a260-1292-4874-bbe5-3693a341d332/connec
 
 Retrieving the connection record for a given company is done using a `GET` request specifying both the `connection` and the `company` as path parameters.
 
+The result contains the state of the connection (see [connection lifecycle](#connection-lifecycle)) as well as the data extraction status for each underlying data source.
+
 | Field          | Location | Type     | Description                          |
 | :------------- | -------- | -------- | ------------------------------------ |
 | **company**    | Path     | *string* | The ID of the company                |

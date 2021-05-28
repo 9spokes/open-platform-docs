@@ -41,10 +41,10 @@ Below is the metadata wrapper used to classify and search organisation data. The
 
 | Field                      | Data Type           | Description                                                                                                  |
 | :------------------------- | :------------------ | :----------------------------------------------------------------------------------------------------------- |
-| **user**                   | *UUIDv4*            | This is the user's id of the company that this transaction belongs to.                                       |
-| **company**                | *UUIDv4*            | The company id                                                                                               |
+| **user**                   | *uuid*              | This is the user's id of the company that this transaction belongs to.                                       |
+| **company**                | *uuid*              | The company id                                                                                               |
 | **datasource**             | *string*            |                                                                                                              |
-| **connection_id**          | *UUIDv4*            | This is the connection_id which was used to retrieve the origin data.                                        |
+| **connection_id**          | *uuid*              | This is the connection_id which was used to retrieve the origin data.                                        |
 | **object_class**           | `organisation`      | This is used to retrieve a specific type of data schema:                                                     |
 | **object_category**        | `bookkeeping`       | This is used to categorise the document.                                                                     |
 | **object_type**            | `company-details`   | This is the associated time dimension of the metric.                                                         |

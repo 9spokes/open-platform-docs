@@ -79,8 +79,8 @@ Individual line items can be found for each bill under the `line_items` key.
 
 | Field             | Data Type        | Description                                         |
 | :---------------- | ---------------- | --------------------------------------------------- |
-| **company**       | *UUIDv4*         | The ID of the company owning the connection         |
-| **connection_id** | *UUIDv4*         | The ID of the connection                            |
+| **company**       | *uuid*           | The ID of the company owning the connection         |
+| **connection_id** | *uuid*           | The ID of the connection                            |
 | **datasource**    | `bills`          | Always `bills` for bills                            |
 | **osp**           | *string*         | The name of the app provider                        |
 | **updated**       | *date*           | The time and date when this record was last updated |
