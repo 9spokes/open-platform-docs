@@ -1,6 +1,15 @@
 ## Leaves
 
-A leave is a time-off requested to a specific company by a employee.
+A leave is a time-off requested to a specific company by a employee. Following is the data specification for a leave record that is extracted from HR/Payroll OSPs
+
+> Retrieving the list of leaves for a connection is done by querying the `leaves` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/leaves \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of leaves as seen below.
 
 ```json
 { 
@@ -42,6 +51,7 @@ A leave is a time-off requested to a specific company by a employee.
 }
 
 ```
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/leaves</code>
 
 ### Data schema
 

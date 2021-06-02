@@ -1,8 +1,15 @@
 ## Product
 
-This is the specification for the Product Items. It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform.
+This is the specification for the Product Items. It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform. Following is the data specification for products as extracted from POS OSPs
 
-### Field Description
+> Retrieving the products data for a connection is done by querying the `products` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/products \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of Product data as seen below.
 
 ```json
 {
@@ -39,6 +46,9 @@ This is the specification for the Product Items. It is in JSON format and the me
     }  
 }
 ```
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/products</code>
+
+### Metadata
 
 Below is the metadata wrapper used to classify and search product data. The product data is stored under the `data` key.
 
@@ -56,6 +66,8 @@ Below is the metadata wrapper used to classify and search product data. The prod
 | **object_origin**          | *string*       | This is the name of the application which matches the app-key in the connection records.                     |
 | **object_creation_date**   | *date*         | Creation time of document                                                                                    |
 | **data**                   | Product Object | The actual product data, see below                                                                           |
+
+### Data
 
 Below is the content of the `data` object used with `product`.
 

@@ -1,6 +1,16 @@
 ## Pay run summary
 
-Summarized pay run of different periods.
+Summarized pay run of different periods. Following is the data specification for pay run summary as extracted from HR/Payroll OSPs
+
+> Retrieving pay run summary for a connection is done by querying the `payRunSummary` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/payRunSummary \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of pay run summary as seen below.
+
 
 ```json
 { 
@@ -23,6 +33,7 @@ Summarized pay run of different periods.
 }
 
 ```
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/payRunSummary</code>
 
 ### Data schema
 

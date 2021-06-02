@@ -1,6 +1,16 @@
 ## Contacts
 
-A contact is a person or organisation that associated with your business. 
+A contact is a person or organisation that associated with your business. Following is the data specification for contacts extracted from accounting/POS OSPs
+
+> Retrieving the list of contacts for a connection is done by querying the `contacts` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/contacts \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of contacts as seen below.
+
 
 ```json
 {
@@ -47,6 +57,7 @@ A contact is a person or organisation that associated with your business.
     ]
 }
 ```
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/contacts</code>
 
 ### Data schema
 

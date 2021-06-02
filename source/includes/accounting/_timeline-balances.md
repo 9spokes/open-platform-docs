@@ -54,6 +54,6 @@ A timeline/trial balance is a list of all the general ledger accounts contained 
 | **account_type**       | *string*               | Type of the account, possible values are `bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term` |
 | **account_category**   | *string*               | The category of account this is. Must be one of `assets`, `equity`, `expense`, `liability`, `revenue`                         |
 | **account_currency**   | *string[3]*            | Currency of the account                                                                                                       |
-| **status**             | `ACTIVE` or `INACTIVE` | Whether the account is active or not                                                                                          |
-| **value_type**         | `debit` or `credit`    | Debit/Credit                                                                                                                  |
+| **status**             | *string                | Whether the account is active or not                                                                                          |
+| **value_type**         | *string*               | Debit/Credit                                                                                                                  |
 | **total_value**        | *number*               | The value of the account                                                                                                      |
