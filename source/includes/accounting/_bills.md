@@ -81,10 +81,10 @@ Individual line items can be found for each bill under the `line_items` key.
 | :---------------- | ---------------- | --------------------------------------------------- |
 | **company**       | *uuid*           | The ID of the company owning the connection         |
 | **connection_id** | *uuid*           | The ID of the connection                            |
-| **datasource**    | *string*         | Always `bills` for bills                            |
+| **datasource**    | `bills`          | Always `bills` for bills                            |
 | **osp**           | *string*         | The name of the app provider                        |
 | **updated**       | *date*           | The time and date when this record was last updated |
-| **cycle**         | *string*         | Whether this data is pulled daily or monthly        |
+| **cycle**         | `day` or `month` | Whether this data is pulled daily or monthly        |
 | **currency**      | *string*         | The ISO4217 code for the currency for this bill     |
 | **data**          | *Bill[]*         | An array of bills as defined below                  |
 
@@ -108,17 +108,17 @@ Individual line items can be found for each bill under the `line_items` key.
 
 ### Line Item
 
-| Field                            | Data Type | Description                                                               |
-| :------------------------------- | --------- | ------------------------------------------------------------------------- |
-| **product_name**                 | *string*  | This is the name of the item being sold which may be a product or service |
-| **system_id**                    | *string*  | Unique identifier of the line item on 9 Spokes's end                      |
-| **item_identifier**              | *string*  | Unique identifier of the line item on app's end                           | 
-| **item_category**                | *string*  | Account category under which the transaction item was originally listed |
-| **item_type**                    | *string*  | 'bill' when the osp is an accouting app and 'good-service' when the osp is a point of sale app |
-| **item_net_unit_sale_value**     | *number*  | Net sale value per item |
-| **item_net_unit_discount_value** | *number*  | Net discount value per item |
-| **item_unit_tax_value**          | *number*  | Tax value per item |
+| Field                            | Data Type | Description                                                                                       |
+| :------------------------------- | --------- | ------------------------------------------------------------------------------------------------- |
+| **product_name**                 | *string*  | This is the name of the item being sold which may be a product or service                         |
+| **system_id**                    | *string*  | Unique identifier of the line item on 9 Spokes's end                                              |
+| **item_identifier**              | *string*  | Unique identifier of the line item on app's end                                                   |
+| **item_category**                | *string*  | Account category under which the transaction item was originally listed                           |
+| **item_type**                    | *string*  | 'bill' when the osp is an accouting app and 'good-service' when the osp is a point of sale app    |
+| **item_net_unit_sale_value**     | *number*  | Net sale value per item                                                                           |
+| **item_net_unit_discount_value** | *number*  | Net discount value per item                                                                       |
+| **item_unit_tax_value**          | *number*  | Tax value per item                                                                                |
 | **item_price_list_reference**    | *string*  | Reference to any pre-set discounting based upon specific price lists (specials, happy hour, etc.) |
-| **item_total_gross_value**       | *number*  | Total gross value of the item (before tax) |
-| **item_total_net_value**         | *number*  | Net value of the item (after tax) |
-| **item_total_tax_value**         | *number*  | Total tax value applied to the item | 
+| **item_total_gross_value**       | *number*  | Total gross value of the item (before tax)                                                        |
+| **item_total_net_value**         | *number*  | Net value of the item (after tax)                                                                 |
+| **item_total_tax_value**         | *number*  | Total tax value applied to the item                                                               |
