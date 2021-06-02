@@ -1,10 +1,15 @@
 ## Tax Rates
 
-This is the specification for the Tax Rates of business . It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform.
+Following is the data specification of tax rates as extracted from accounting/POS OSPs
 
-### Field Description
+> Retrieving the list of tax types and corresponding rates for a connection is done by querying the `taxRates` endpoint for that connection
 
-> Below is the schema definition for a `tax-rate` record
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/taxRates \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of tax rates as seen below.
 
 ```json
 {
@@ -35,6 +40,12 @@ This is the specification for the Tax Rates of business . It is in JSON format a
 }
 ```
 
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/taxRates</code>
+
+The `taxRates` endpoint for a connection returns an array of tax rates.  Each record contains a *metadata* envelope and a `data` key.  The `data` key for taxRates is always an array of taxRates.
+
+### Metadata
+
 | Field                      | Data Type                 | Description                                                                                                  |
 | :------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | **user**                   | *uuid*                    | This is the user's id of the company that this transaction belongs to.                                       |
@@ -50,6 +61,8 @@ This is the specification for the Tax Rates of business . It is in JSON format a
 | **object_origin**          | *string*                  | This is the name of the application which matches the app-key in the connection records.                     |
 | **object_creation_date**   | *date*                    | Creation time of document                                                                                    |
 | **data**                   | Tax Rate Array of objects | The actual timeline balance data, see below                                                                  |
+
+### Data
 
 Below is the content of the `data` object used with `tax-rates`.
 

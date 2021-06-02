@@ -1,6 +1,15 @@
 ## Bank Accounts
 
-Bank accounts is a list of real-life bank accounts from a connected app platform for the associated business.
+Bank accounts is a list of bank accounts from a connected app platform for the associated business.  Following is the data specification for a bank account that is extracted from banking OSPs
+
+> Retrieving the list of bank accounts for a connection is done by querying the `bankAccounts` endpoint for that connection
+
+```sh
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/bankAccounts \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The response is an array of bank accounts as seen below.
 
 ```json
 {
@@ -25,11 +34,12 @@ Bank accounts is a list of real-life bank accounts from a connected app platform
     ]
 }
 ```
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/bankAccounts</code>
 
 ### Data schema
 
 | Field             | Data Type | Description                                                |
-|-------------------|-----------|------------------------------------------------------------|
+| ----------------- | --------- | ---------------------------------------------------------- |
 | **balance_date**  | *date*    | The date when the bank accounts were recorded              |
 | ***accounts***    | *array*   | Array of accounts                                          |
 | **id**            | *string*  | The unique identifier for the account in the platform      |

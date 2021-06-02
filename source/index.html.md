@@ -8,6 +8,7 @@ language_tabs:
 toc_footers:
   - <a href='https://www.9spokes.com/app-partners'>9Spokes</a>
   - <a href='https://www.9spokes.com/terms-and-conditions'>Terms of Use</a>
+  - <a href='https://odp.9spokes.io/'>Try 9Spokes Open</a>
 
 includes:
   - organisation/index
@@ -17,12 +18,13 @@ includes:
   - connections/index
   - accounting/index
   - accounting/bills
+  - accounting/invoices
   - accounting/cards
   - accounting/contacts
   - accounting/timeline-balances
   # - accounting/goods-services-transaction
   - accounting/tax-rates
-  - accounting/organisation
+  # accounting/organisation
   - banking/index
   - banking/accounts
   - hr/index
@@ -44,9 +46,18 @@ search: true
 code_clipboard: true
 ---
 
-# Overview
+# 9Spokes Open
 
-Below is a comprehensive list of 9Spokes data schemas sorted by category. For each category, all the relevant schemas are listed alongside a detailed field description, schema definition, and a sample JSON structure containing dummy data.
+## Overview
+
+9Spokes Open APIs categorised by a growing list of data sources like Accounting, Banking, POS and others
+
+Under each data category, the following pieces are listed:
+
+* Summary of the data category
+* API endpoint path with query parameters
+* Data Schema definition with field descriptions
+* A sample JSON structure containing dummy data
 
 ## Authentication
 
