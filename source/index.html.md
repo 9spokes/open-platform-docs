@@ -50,12 +50,14 @@ code_clipboard: true
 
 ## Overview
 
-* 9Spokes Open APIs categorised by a growing list of data sources like Accounting, Banking, POS and others
-* Under each data category, the following pieces are listed
-  * Summary of the data category
-  * API endpoint path with query parameters 
-  * Data Schema definition with field descriptions
-  * A sample JSON structure containing dummy data
+9Spokes Open APIs categorised by a growing list of data sources like Accounting, Banking, POS and others
+
+Under each data category, the following pieces are listed:
+
+* Summary of the data category
+* API endpoint path with query parameters
+* Data Schema definition with field descriptions
+* A sample JSON structure containing dummy data
 
 ## Authentication
 
