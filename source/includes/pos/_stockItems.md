@@ -1,6 +1,6 @@
 ## Stock Items
 
-This is the specification for the Stock Items. It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform. Following is the data specification for stock items as extracted from POS OSPs
+This is the specification for Stock Items. It is in JSON format and the metadata allow the resolvers to identify the type of data required and the related fields to transform. Following is the data specification for stock items as extracted from POS OSPs
 
 > Retrieving the stock items data for a connection is done by querying the `stockItems` endpoint for that connection
 
@@ -46,18 +46,18 @@ Below is the metadata wrapper used to classify and search stock items data. The 
 
 | Field                      | Data Type                   | Description                                                                                                  |
 | :------------------------- | :-------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| **user**                   | *uuid*                      | This is the user's id of the company that this transaction belongs to.                                       |
-| **company**                | *uuid*                      | The company id                                                                                               |
+| **user**                   | *uuid*                      | User's ID of the company that this transaction belongs to                                      |
+| **company**                | *uuid*                      | The company ID                                                                                              |
 | **datasource**             | *string*                    | The datasource name                                                                                          |
-| **connection_id**          | *uuid*                      | This is the connection_id which was used to retrieve the origin data.                                        |
-| **object_class**           | *string*                    | This is used to retrieve a specific type of data schema:                                                     |
-| **object_category**        | *string*                    | This is used to categorise the document.                                                                     |
-| **object_type**            | *string*                    | This is the associated time dimension of the metric.                                                         |
-| **object_origin_category** | *string*                    | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
-| **object_origin_type**     | *string*                    | This is the specific type of origin related to the origin category                                           |
-| **object_origin**          | *string*                    | This is the name of the application which matches the app-key in the connection records.                     |
+| **connection_id**          | *uuid*                      | ID used to retrieve the origin data                                        |
+| **object_class**           | *string*                    | Retrieves a specific type of data schema                                                     |
+| **object_category**        | *string*                    | Used to categorise the document                                                                     |
+| **object_type**            | *string*                    | Associated time element of the metric                                                         |
+| **object_origin_category** | *string*                    | The 9Spokes categorization of data origin business applications (and other data producing services) |
+| **object_origin_type**     | *string*                    | Specific origin type related to the origin category                                           |
+| **object_origin**          | *string*                    | Name of the application which matches the app-key in the connection records                     |
 | **object_creation_date**   | *date*                      | Creation time of document                                                                                    |
-| **data**                   | Array of stock item objects | The actual product data, see below                                                                           |
+| **data**                   | Array of stock item objects | The actual product data (see below)                                                                           |
 
 ### Data
 
@@ -65,10 +65,10 @@ Below is the content of the `data` object used with `stock items`.
 
 | Field                            | Data Type | Description                                         |
 | :------------------------------- | :-------- | :-------------------------------------------------- |
-| **item_id**                      | *string*  | The specific stock item id related to the product   |
+| **item_id**                      | *string*  | Specific item ID of the product   |
 | **item_name**                    | *string*  | The specific stock item name related to the product |
 | **active**                       | *boolean* | The item has stock values                           |
 | **item_quantity**                | *number*  | The units of stock items available for sale         |
 | **item_cost_price**              | *number*  | The unit cost of the stock item                     |
 | **item_sale_price_includes_tax** | *boolean* | The item sale price includes tax                    |
-| **tax_rate_id**                  | *string*  | The specific tax rate id related to the stock item  |
+| **tax_rate_id**                  | *string*  | The tax rate ID of the stock item  |

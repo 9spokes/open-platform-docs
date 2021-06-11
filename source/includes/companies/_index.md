@@ -1,6 +1,6 @@
 # Companies
 
-A **Company** object represents a real business or organisation.  Companies are the most fundamental data container whereby all connections and all their associated data must belong to a company object.
+A **Company** object represents a real business or organization.  Companies are the most fundamental data container whereby all connections and all their associated data must belong to a company object.
 
 ## Create New Company
 
@@ -128,5 +128,5 @@ Removing a company is done by issuing a `DELETE` request and specifying the `com
 | **company** | Path     | *string* | The ID of the company to remove |
 
 <aside class="warning">
-Deleting a company also removes all the connections and their associated data, it is irreversible!
+Deleting a company also removes all the connections and their associated data. It is irreversible!
 </aside>

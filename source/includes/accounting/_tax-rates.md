@@ -48,19 +48,18 @@ The `taxRates` endpoint for a connection returns an array of tax rates.  Each re
 
 | Field                      | Data Type                 | Description                                                                                                  |
 | :------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **user**                   | *uuid*                    | This is the user's id of the company that this transaction belongs to.                                       |
-| **company**                | *uuid*                    | The company id                                                                                               |
-| **datasource**             | *string*                  |                                                                                                              |
-| **connection_id**          | *uuid*                    | This is the connection_id which was used to retrieve the origin data.                                        |
-| **object_class**           | `rates`                   | This is used to retrieve a specific type of data schema:                                                     |
-| **object_category**        | `general-ledger`          | This is used to categorise the document.                                                                     |
-| **object_type**            | `day` or `month`          | This is the associated time dimension of the metric.                                                         |
-| **object_origin_category** | `bookkeeping`             | This is the 9 Spokes categorisation of data origin business applications (and other data producing services) |
-| **object_origin_type**     | `accounting`              | This is the specific type of origin related to the origin category                                           |
-| **object_origin**          | *string*                  | This is the name of the application which matches the app-key in the connection records.                     |
-| **object_origin**          | *string*                  | This is the name of the application which matches the app-key in the connection records.                     |
+| **user**                   | *uuid*                    | User's ID of the company that the transaction belongs to.                                       |
+| **company**                | *uuid*                    | The company ID                                                                                               |
+| **datasource**             | *string*                  | `tax-rates`                                        |
+| **connection_id**          | *uuid*                    | ID used to retrieve the origin data                                        |
+| **object_class**           | `rates`                   | Retrieves a specific type of data schema                                                     |
+| **object_category**        | `general-ledger`          | Used to categorize the document                                                                     |
+| **object_type**            | `day` or `month`          | Associated time element of the metric                                                         |
+| **object_origin_category** | `bookkeeping`             | The 9Spokes categorization of data origin business applications (and other data producing services) |
+| **object_origin_type**     | `accounting`              | Specific type of origin related to the origin category                                           |
+| **object_origin**          | *string*                  | Name of the application which matches the app-key in the connection records                     |
 | **object_creation_date**   | *date*                    | Creation time of document                                                                                    |
-| **data**                   | Tax Rate Array of objects | The actual timeline balance data, see below                                                                  |
+| **data**                   | Tax Rate Array of objects | The actual timeline balance data (see below)                                                                  |
 
 ### Data
 
