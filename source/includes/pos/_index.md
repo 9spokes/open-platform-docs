@@ -1,6 +1,6 @@
 # Point of sale
 
-The following Apps are currently supported
+The following apps are currently supported
 
 <img src="/images/apps/vend/icon.svg" alt="Vend" class="app-logo" />
 <img src="/images/apps/unleashed/icon.svg" alt="Unleashed" class="app-logo" />

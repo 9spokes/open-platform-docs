@@ -98,11 +98,11 @@ Individual line items can be found for each bill under the `line_items` key.
 | **transaction_due_date**           | *date*       | Date on which the bill is due                                                        |
 | **transaction_status**             | *string*     | Status of the bill (Paid, Unpaid)                                                    |
 | **transaction_reference**          | *string*     | Unique identifier of the bill on OSP's end                                           |
-| **related_reference**              | *string*     |                                                                                      |
-| **party_identifier**               | *string*     |                                                                                      |
+| **related_reference**              | *string*     | Unique reference related to the transaction                                          |
+| **party_identifier**               | *string*     | Unique identifier for the third party                                                |
 | **transaction_currency**           | *string*     | Currency in which the bill was issued                                                |
 | **transaction_gross_value**        | *number*     | Total bill amount                                                                    |
-| **transaction_net_value**          | *number*     | Bill sub-total                                                                       |
+| **transaction_net_value**          | *number*     | Bill subtotal                                                                       |
 | **tax_amount**                     | *number*     | Total applied tax amount                                                             |
 | **line_items**                     | *LineItem[]* | An array of line items as defined below                                              |
 
@@ -110,9 +110,9 @@ Individual line items can be found for each bill under the `line_items` key.
 
 | Field                            | Data Type | Description                                                                                       |
 | :------------------------------- | --------- | ------------------------------------------------------------------------------------------------- |
-| **product_name**                 | *string*  | This is the name of the item being sold which may be a product or service                         |
-| **system_id**                    | *string*  | Unique identifier of the line item on 9 Spokes's end                                              |
-| **item_identifier**              | *string*  | Unique identifier of the line item on app's end                                                   |
+| **product_name**                 | *string*  | Name of the product or service being sold                         |
+| **system_id**                    | *string*  | Unique identifier of the line item on 9Spokes' end                                              |
+| **item_identifier**              | *string*  | Unique identifier of the line item on the app's end                                                   |
 | **item_category**                | *string*  | Account category under which the transaction item was originally listed                           |
 | **item_type**                    | *string*  | 'bill' when the osp is an accouting app and 'good-service' when the osp is a point of sale app    |
 | **item_net_unit_sale_value**     | *number*  | Net sale value per item                                                                           |

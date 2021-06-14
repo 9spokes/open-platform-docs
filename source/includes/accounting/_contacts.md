@@ -1,6 +1,6 @@
 ## Contacts
 
-A contact is a person or organisation that associated with your business. Following is the data specification for contacts extracted from accounting/POS OSPs
+A contact is a person or organization that is associated with your business. Following is the data specification for contacts extracted from accounting/POS OSPs
 
 > Retrieving the list of contacts for a connection is done by querying the `contacts` endpoint for that connection
 
@@ -59,20 +59,20 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/contacts</code>
 
-### Data schema
+### Data Schema
 
 | Field           | Data Type | Description                                                                                  |
 |-----------------|-----------|----------------------------------------------------------------------------------------------|
 | **contacts**    | *array*   | Array of contacts                                                                            |
-| **type**        | *string*  | Type of the contact, either: <ul><li>`CUSTOMER`</li><li>`SUPPLIER`</li><li>`OTHER`</li></ul> |
+| **type**        | *string*  | The contact type, either: <ul><li>`CUSTOMER`</li><li>`SUPPLIER`</li><li>`OTHER`</li></ul> |
 | **id**          | *string*  | The unique identifier for the contact in the platform                                        |
-| **email**       | *string*  | Account number for the bank account                                                          |
-| **name**        | *string*  | Name of the bank account in the platform                                                     |
-| **phone**       | *string*  | Status of the bank account                                                                   |
+| **email**       | *string*  | Email address of the contact                                                         |
+| **name**        | *string*  | Name of the contact                                                     |
+| **phone**       | *string*  | Phone number of the contact                                                                   |
 | ***addresses*** | *array*   | Array of addresses for the contact                                                           |
-| **type**        | *array*   | Type of the address, either: <ul><li>`BILLING`</li><li>`DELIVERY`</li><li>`OTHER`</li></ul>  |
+| **type**        | *array*   | The address type, either: <ul><li>`BILLING`</li><li>`DELIVERY`</li><li>`OTHER`</li></ul>  |
 | **country**     | *array*   | Country of the contact address                                                               |
 | **postal_code** | *array*   | Postal code for the contact address                                                          |
 | **line1**       | *array*   | Line 1 of the contact address                                                                |
-| **line1**       | *array*   | Line 2 of the contact address                                                                |
+| **line2**       | *array*   | Line 2 of the contact address                                                                |
 

@@ -1,6 +1,6 @@
 ## Email Marketing
 
-Email Marketing data simplifies the analysis of performance of email campaigns. Following is the data specification for email marketing as extracted from Email Marketing OSPs
+Email Marketing data simplifies the analysis of email campaign performance. Following is the data specification for email marketing as extracted from Email Marketing OSPs
 
 > Retrieving the Email Marketing data for a connection is done by querying the `emailMarketing` endpoint for that connection
 
@@ -33,10 +33,10 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 | Field                  | Data Type | Description                                                         |
 | :--------------------- | :-------- | :-------------------------------------------------------------------|
-| **id**                   | *string*  | Campaign ID (App-wide unique id)                                       |
+| **id**                   | *string*  | Campaign ID (App-wide unique ID)                                       |
 | **web_id**               | *string*  | ID used for web links                                             |
-| **created**              | *string*  | Campaign reation date                                            |
+| **created**              | *string*  | Campaign creation date                                            |
 | **status**               | *string*  | Campaign stats (`Draft`, `Scheduled`, `Executing`, `Done`, `Error`, `Removed`)|
 | **name**                 | *string*  | Campaign name                                                    |
-| **type**                 | *string*  | One of `Newsletter`, `Ratings and Reviews`, `Announcement`, `Business Letter` |
+| **type**                 | *string*  | Campaign type (`Newsletter`, `Ratings and Reviews`, `Announcement`, `Business Letter`) |
 | **list_id**              | *string*  | ID of recipient list                                             |

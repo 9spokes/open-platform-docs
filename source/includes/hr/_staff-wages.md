@@ -1,6 +1,6 @@
-## Staff wages
+## Staff Wages
 
-Staff wages is the record of pay run categorised by employment type. Following is the data specification for staff wages as extracted from HR/Payroll OSPs
+Staff wages is the record of pay run categorized by employment type. Following is the data specification for staff wages as extracted from HR/Payroll OSPs
 
 > Retrieving staff wages for a connection is done by querying the `staffWages` endpoint for that connection
 
@@ -35,7 +35,7 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/staffWages</code>
 
-### Data schema
+### Data Schema
 
 | Field               | Data Type | Description                                                                                                                 |
 |---------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------|

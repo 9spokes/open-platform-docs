@@ -7,7 +7,7 @@
 
 ```sh
 # The example below assumes you have the API_ROOT and API_KEY environment variables set
-$ curl https://${API_ROOT}/organisation/redirect_url \
+$ curl https://${API_ROOT}/organization/redirect_url \
     -X PUT \
     -d "redirect_url=https://example.com/callback" \
     -H "Content-type: application/x-www-form-urlencoded" \    
@@ -23,7 +23,7 @@ $ curl https://${API_ROOT}/organisation/redirect_url \
 }
 ```
 
-<span class="api api-put"></span> <code>/organisation/redirect_url</code>
+<span class="api api-put"></span> <code>/organization/redirect_url</code>
 
 This endpoint is used to configure the URL where your users are redirected to after completing a consent flow.  Whether the flow succeeds or not, the `redirect_url` will be used to redirect the user agents back to your platform.
 
@@ -39,7 +39,7 @@ The `redirect_url` must be an absolute URL and it must be URL-encoded.
 
 ```sh
 # The example below assumes you have the API_ROOT and API_KEY environment variables set
-$ curl https://${API_ROOT}/organisation/redirect_url \
+$ curl https://${API_ROOT}/organization/redirect_url \
     -H "Authorization: ${API_KEY}"
 ```
 
@@ -54,6 +54,6 @@ $ curl https://${API_ROOT}/organisation/redirect_url \
 }
 ```
 
-<span class="api api-get"></span> <code>/organisation/redirect_url</code>
+<span class="api api-get"></span> <code>/organization/redirect_url</code>
 
 This endpoint is used to retrieve the currently configured redirect URL.

@@ -2,15 +2,15 @@
 
 A **connection** represents a link to a data provider.  Connections belong to companies and they are mutually exclusive from one another.  Only a single connection of any type can belong to any given company.
 
-Connections transition through several preset stages as the end-user creates, consents to, and terminates a connection to a given App.  The supported connection states are listed below.
+Connections transition through several preset stages as the end-user creates, consents to, and terminates a connection to a given app. The supported connection states are listed below.
 
 ## Connection Lifecycle
 
 | State           | Description                                                                     |
 | :-------------- | ------------------------------------------------------------------------------- |
 | `NEW`           | The connection was created and has not yet been authorized                      |
-| `ACTIVE`        | The connection has been authorised, data is flowing                             |
-| `NOT_CONNECTED` | The connection to the App provider has been lost, user intervention is required |
+| `ACTIVE`        | The connection has been authorized and data is flowing                             |
+| `NOT_CONNECTED` | The connection to the app provider has been lost and user intervention is required |
 | `REMOVED`       | The connection has been disabled and is pending removal                         |
 
 ## Create New Connection
@@ -49,7 +49,7 @@ Creating a new connection for a given company is done using a `POST` request to 
 | Field       | Location | Type     | Description                    |
 | :---------- | -------- | -------- | ------------------------------ |
 | **company** | Path     | *string* | The ID of the company          |
-| **app**     | Form     | *string* | The name of the App to connect |
+| **app**     | Form     | *string* | The name of the app to connect |
 
 The `authorize_url` key in the response should be used to redirect the user agent.
 
@@ -156,5 +156,5 @@ Removing a connection for a given company is done by issuing a `DELETE` request 
 | **connection** | Path     | *string* | The ID of the connection to remove |
 
 <aside class="warning">
-Deleting a connection removes all the data associated with that company, it is irreversible!
+Deleting a connection removes all the data associated with that company, it's irreversible!
 </aside>

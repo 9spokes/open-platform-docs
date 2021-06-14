@@ -50,7 +50,7 @@ code_clipboard: true
 
 ## Overview
 
-9Spokes Open APIs categorised by a growing list of data sources like Accounting, Banking, POS and others
+Welcome! 9Spokes Open APIs are categorized by a growing list of data sources like Accounting, Banking, POS and others.
 
 Under each data category, the following pieces are listed:
 
@@ -90,7 +90,7 @@ You must replace <code>63TX2kPSahV...xk7MKge9ut</code> with your own API key.
 
 ### Sandbox
 
-All App developers must begin their journey by first integrating with our sandbox environment.  The sandbox environment allows you to safely test your application without worrying about scopes, rate limits, or other production features.
+All app developers must begin their journey by first integrating with our sandbox environment.  The sandbox environment allows you to safely test your application without worrying about scopes, rate limits, or other production features.
 
 <aside class="notice">
 The API root for the Sandbox environment is <code>https://sandbox.api.9spokes.com</code>
@@ -100,41 +100,41 @@ You may generate up to 2 Sandbox API keys, the first of which is automatically g
 
 ### Production
 
-Once your App development is complete, you may request Production API keys to interact with the live environment.  Production APIs are identical to their Sandbox counterparts with the exception of the root URL.
+Once your app development is complete, you may request Production API keys to interact with the live environment. Production APIs are identical to their Sandbox counterparts with the exception of the root URL.
 
 <aside class="notice">
-The API root for the Live environment is <code>https://api.9spokes.com</code>
+The API root for the live environment is <code>https://api.9spokes.com</code>
 </aside>
 
-<aside class="warning">Sandbox API keys cannot be used in the live environment and vise-versa.</aside>
+<aside class="warning">Sandbox API keys cannot be used in the live environment and vice-versa.</aside>
 
 ## API Structure
 
 ### Requests
 
-The 9Spokes API organises data in a RESTful manner.  This means data resources are organised hierarchically, with the `company` object being the left-most resource in most cases.
+The 9Spokes API organizes data in a RESTful manner.  This means data resources are organized hierarchically, with the `company` object being the topmost resource in most cases.
 
 ### Responses
 
-All API responses adhere to a strict JSON data format making it easy for App developers to parse success & error responses.  The `content-type` is always `application/json` and the response body is always an object containing, at the very least, a `status` key.  The value of `status` is either `ok` for successes or `err` for errors.
+All API responses adhere to a strict JSON data format making it easy for app developers to parse success & error responses.  The `content-type` is always `application/json` and the response body is always an object containing, at the very least, a `status` key.  The value of `status` is either `ok` for successes or `err` for errors.
 
-HTTP status codes are used to further categorise the response.  The table below denotes all the supported HTTP response codes.
+HTTP status codes are used to further categorize the response.  The table below denotes all the supported HTTP response codes.
 
 | HTTP Code | Meaning                 | Corrective Action                                                      |
 | --------- | ----------------------- | ---------------------------------------------------------------------- |
-| **200**   | *OK*                    | The request was processed successfully                                 |
-| **400**   | *Bad Request*           | The request is invalid, check the format of your request and try again |
+| **200**   | *OK*                    | The request was processed successfully.                                |
+| **400**   | *Bad Request*           | The request is invalid. Check the format of your request and try again. |
 | **401**   | *Unauthorized*          | The API key is not accepted.                                           |
-| **403**   | *Forbidden*             | The request is denied though the API key may be valid.                 |
-| **404**   | *Not Found*             | The specified resource does not exist                                  |
-| **405**   | *Method Not Allowed*    | Only the documented HTTP verbs are supported                           |
-| **429**   | *Too Many Requests*     | You have hit a rate limit, reduce your request rate                    |
-| **500**   | *Internal Server Error* | An internal error has occured processing your request                  |
-| **503**   | *Service Unavailable*   | The API is temporarily unavailable                                     |
+| **403**   | *Forbidden*             | The request is denied, however the API key may be valid.                 |
+| **404**   | *Not Found*             | The specified resource does not exist.                                  |
+| **405**   | *Method Not Allowed*    | Only the documented HTTP verbs are supported.                           |
+| **429**   | *Too Many Requests*     | You have hit a rate limit. Reduce your request rate.                   |
+| **500**   | *Internal Server Error* | An internal error has occurred processing your request.                  |
+| **503**   | *Service Unavailable*   | The API is temporarily unavailable.                                     |
 
 ### Success Response
 
-Successful responses yield an HTTP status code of `200` and a JSON body similar to the structure below:
+Successful responses yield a HTTP status code of `200` and a JSON body similar to the structure below:
 
 > A typical success response
 
@@ -155,7 +155,7 @@ The `status` key is set to `ok` and the `details` key is present.
 
 ### Error Response
 
-API requests that could not be processed will carry an HTTP code that is greater than `399` and a body similar to the structure shown here.
+API requests that could not be processed will carry a HTTP code that is greater than `399` and a body similar to the structure shown here.
 
 > An error response.  `message` contains the error string
 
@@ -167,12 +167,4 @@ API requests that could not be processed will carry an HTTP code that is greater
 ```
 
 The `message` key is always a string explaining the nature of the problem that was encountered.
-
-### Metadata
-
-Any data responses excluding `companies` and `connections` will have an outermost envelope around the data describing the nature and content of that particular record.  This _metadata_ is comprised of common keys and contextual keys.  The common keys are described in the table below and can be used to quickly classify the data.
-
-
-
-## Data Relationship
 

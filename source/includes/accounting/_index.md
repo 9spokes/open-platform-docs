@@ -1,6 +1,6 @@
 # Accounting
 
-The following Apps are currently supported
+The following apps are currently supported
 
 <img src="/images/apps/sageone/icon.svg" alt="SageOne" class="app-logo" />
 <img src="/images/apps/myob-accountright/icon.svg" alt="MYOB Account Right" class="app-logo" />

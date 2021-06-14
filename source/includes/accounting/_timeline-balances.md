@@ -50,9 +50,9 @@ A timeline/trial balance is a list of all the general ledger accounts contained 
 | :------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | **account_identifier** | *string*               | Account ID                                                                                                                    |
 | **account_name**       | *string*               | Account name                                                                                                                  |
-| **account_code**       | *string*               | The chart of accounts code                                                                                                    |
-| **account_type**       | *string*               | Type of the account, possible values are `bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term` |
-| **account_category**   | *string*               | The category of account this is. Must be one of `assets`, `equity`, `expense`, `liability`, `revenue`                         |
+| **account_code**       | *string*               | The chart of account codes                                                                                                    |
+| **account_type**       | *string*               | The account type (`bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term`) |
+| **account_category**   | *string*               | The account category (`assets`, `equity`, `expense`, `liability`, `revenue`)                         |
 | **account_currency**   | *string[3]*            | Currency of the account                                                                                                       |
 | **status**             | *string                | Whether the account is active or not                                                                                          |
 | **value_type**         | *string*               | Debit/Credit                                                                                                                  |

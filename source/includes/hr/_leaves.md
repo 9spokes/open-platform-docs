@@ -1,6 +1,6 @@
 ## Leaves
 
-A leave is a time-off requested to a specific company by a employee. Following is the data specification for a leave record that is extracted from HR/Payroll OSPs
+A leave is time-off requested to a company by an employee. Following is the data specification for a leave record that is extracted from HR/Payroll OSPs
 
 > Retrieving the list of leaves for a connection is done by querying the `leaves` endpoint for that connection
 
@@ -53,16 +53,16 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/leaves</code>
 
-### Data schema
+### Data Schema
 
 | Field               | Data Type        | Description                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------|
-| **id**              | *string*         | The unique identifier of the leave in the platform                                                             |
-| **type**            | *string*         | Type of the leave, either: <ul><li>`SICK`</li><li>`PAID`</li><li>`UNPAID`</li><li>`OTHER`</li></ul>            |
-| **status**          | *string*         | status of the leave, either: <ul><li>`PENDING`</li><li>`DECLINED`</li><li>`APPROVED`</li><li>`OTHER`</li></ul> |
-| **start_date**      | *date*           | Start date of the leave                                                                                        |
-| **end_date**        | *date*           | End date of the leave                                                                                          |
+| **id**              | *string*         | Unique identifier of the leave request in the platform                                                             |
+| **type**            | *string*         | The leave type, either: <ul><li>`SICK`</li><li>`PAID`</li><li>`UNPAID`</li><li>`OTHER`</li></ul>            |
+| **status**          | *string*         | The leave status, either: <ul><li>`PENDING`</li><li>`DECLINED`</li><li>`APPROVED`</li><li>`OTHER`</li></ul> |
+| **start_date**      | *date*           | Start date of the leave request                                                                                        |
+| **end_date**        | *date*           | End date of the leave request                                                                                         |
 | **application_url** | *string*         | URL to the leave application in the platform                                                                   |
-| **employee_id**     | *string*         | The unique identifer of the employee applied for the leave                                                     |
-| **employee_name**   | *string*         | Name of the employee applied for the leave                                                                     |
-| ***dates***         | *array of dates* | Corresponding dates for the leave                                                                              |
+| **employee_id**     | *string*         | Unique identifer of the employee who applied for the leave                                                     |
+| **employee_name**   | *string*         | Name of the employee who applied for the leave                                                                     |
+| ***dates***         | *array of dates* | Dates of the leave request                                                                              |

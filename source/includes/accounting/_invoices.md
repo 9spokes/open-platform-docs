@@ -82,16 +82,16 @@ Individual line items can be found for each invoice under the `line_items` key.
 | **transaction_reference**          | *string*     | Unique identifier of the invoice on OSP's end                                           |
 | **transaction_currency**           | *string*     | Currency in which the invoice was issued                                                |
 | **transaction_gross_value**        | *number*     | Total invoice amount                                                                    |
-| **transaction_net_value**          | *number*     | invoice sub-total                                                                       |
+| **transaction_net_value**          | *number*     | invoice subtotal                                                                       |
 | **line_items**                     | *LineItem[]* | An array of line items as defined below                                                 |
 
 ### Line Item
 
 | Field                            | Data Type | Description                                                               |
 | :------------------------------- | --------- | ------------------------------------------------------------------------- |
-| **product_name**                 | *string*  | This is the name of the item being sold which may be a product or service |
-| **system_id**                    | *string*  | Unique identifier of the line item on 9 Spokes's end                      |
-| **item_identifier**              | *string*  | Unique identifier of the line item on app's end                           |
+| **product_name**                 | *string*  | Name of the product or service being sold
+| **system_id**                    | *string*  | Unique identifier of the line item on 9Spokes' end                      |
+| **item_identifier**              | *string*  | Unique identifier of the line item on the app's end                           |
 | **item_category**                | *string*  | Account category under which the transaction item was originally listed |
 | **item_type**                    | *string*  | 'invoice' when the osp is an accouting app and 'good-service' when the osp is a point of sale app |
 | **item_net_unit_sale_value**     | *number*  | Net sale value per item |

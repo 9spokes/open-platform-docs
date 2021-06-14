@@ -1,6 +1,6 @@
 ## Bank Accounts
 
-Bank accounts is a list of bank accounts from a connected app platform for the associated business.  Following is the data specification for a bank account that is extracted from banking OSPs
+A list of bank accounts from a connected app platform for the associated business.  Following is the data specification for a bank account that is extracted from banking OSPs
 
 > Retrieving the list of bank accounts for a connection is done by querying the `bankAccounts` endpoint for that connection
 
@@ -36,7 +36,7 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/bankAccounts</code>
 
-### Data schema
+### Data Schema
 
 | Field             | Data Type | Description                                                |
 | ----------------- | --------- | ---------------------------------------------------------- |
