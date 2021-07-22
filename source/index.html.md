@@ -168,3 +168,16 @@ API requests that could not be processed will carry a HTTP code that is greater 
 
 The `message` key is always a string explaining the nature of the problem that was encountered.
 
+## Using Postman
+
+For convenience, you may download a copy of a pre-defined [Postman collection](https://cms.9spokes.com/assets/uploads/documents/9Spokes-Open-Postman-Collection.json) to help you get started quickly.
+
+You will need to input your own API key by choosing the folder-level _Authorization_ (9Spokes Open > Authorization) and inputing a key in the `Value` field.
+
+![Configuring Authorization](/images/postman/postman-api-key.png "Postman API Key")
+
+The collection is grouped logically by object type.  Each object type (e.g. Organization, Companies, Connections, ...etc) is kept in its own folder.
+
+![Object Types](/images/postman/postman-folders.png "Postman Folders")
+
+<aside class="notice"><b>Note:</b> only <i>Invoices</i> and <i>Trial Balances</i> are included as example, though you can extend the same approach for other data sources.</aside>
