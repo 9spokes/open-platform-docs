@@ -13,63 +13,46 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 ```json
 {
-  "connection_id": "4125f8c9-9fd6-42ab-bf6a-c6125166650a",
-  "company": "09acae36-59e8-4974-8038-07aad2f3d844",
-  "datasource": "invoices",
-  "osp": "freeagent",
-  "type": "invoice",
-  "updated": "2021-05-24T01:35:28Z",
-  "cycle": "day",
-  "currency": "NZD",
-  "data": [
+  "results": [
     {
-      "currency_rate": 1.0,
-      "transaction_gross_value": 17765.0,
-      "transaction_net_value": 17000.0,
-      "transaction_tax_value": 765.0,
-      "transaction_date": "2021-04-05T00:00:00.000Z",
-      "transaction_due_date": "2021-05-05T00:00:00.000Z",
-      "transaction_reference": "070",
-      "transaction_currency": "NZD",
-      "transaction_status": "PAID",
-      "line_items": [
-        {
-          "product_name": "Samsung Galaxy S6 10.5* Tab",
-          "item_category": "revenue-transaction",
-          "item_type": "invoice",
-          "item_quantity": 10,
-          "item_identifier": "Samsung Galaxy S6 10.5* Tab",
-          "item_net_unit_sale_value": 1700.0,
-          "item_total_net_value": 16235.0,
-          "item_total_tax_value": 765.0,
-          "item_total_gross_value": 17000.0,
-          "system_id": "132516"
-        }
-      ]
-    }
+      "data": {
+        "currency_rate": 1.0,
+        "transaction_gross_value": 17765.0,
+        "transaction_net_value": 17000.0,
+        "transaction_tax_value": 765.0,
+        "transaction_date": "2021-04-05T00:00:00.000Z",
+        "transaction_due_date": "2021-05-05T00:00:00.000Z",
+        "transaction_reference": "070",
+        "transaction_currency": "NZD",
+        "transaction_status": "PAID",
+        "line_items": [
+          {
+            "product_name": "Samsung Galaxy S6 10.5* Tab",
+            "item_category": "revenue-transaction",
+            "item_type": "invoice",
+            "item_quantity": 10,
+            "item_identifier": "Samsung Galaxy S6 10.5* Tab",
+            "item_net_unit_sale_value": 1700.0,
+            "item_total_net_value": 16235.0,
+            "item_total_tax_value": 765.0,
+            "item_total_gross_value": 17000.0,
+            "system_id": "132516"
+          }
+        ]
+      }
+    },
+    ...
   ]
+
 }
+
 ```
 
-<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/invoices</code>
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/data/invoices</code>
 
-The `invoices` endpoint for a connection returns an array of invoices. Each record contains a _metadata_ envelope and a `data` key. The `data` key for invoices is always an array of invoices.
+The `invoices` endpoint for a connection returns an array of invoices. The `data` is the key for an invoice.
 
 Individual line items can be found for each invoice under the `line_items` key.
-
-### Metadata
-
-| Field             | Data Type        | Description                                         |
-| :---------------- | ---------------- | --------------------------------------------------- |
-| **company**       | *UUIDv4*         | The ID of the company owning the connection         |
-| **connection_id** | *UUIDv4*         | The ID of the connection                            |
-| **datasource**    | *string*         | Always `invoices` for invoices                      |
-| **osp**           | *string*         | The name of the app provider                        |
-| **updated**       | *date*           | The time and date when this record was last updated |
-| **cycle**         | *string*         | Whether this data is pulled daily or monthly        |
-| **currency**      | *string*         | The ISO4217 code for the currency for this invoice  |
-| **data**          | *Invoice[]*      | An array of invoices as defined below               |
-
 ### Invoice
 
 | Field                              | Data Type    | Description                                                                             |
@@ -82,7 +65,7 @@ Individual line items can be found for each invoice under the `line_items` key.
 | **transaction_reference**          | *string*     | Unique identifier of the invoice on OSP's end                                           |
 | **transaction_currency**           | *string*     | Currency in which the invoice was issued                                                |
 | **transaction_gross_value**        | *number*     | Total invoice amount                                                                    |
-| **transaction_net_value**          | *number*     | invoice subtotal                                                                       |
+| **transaction_net_value**          | *number*     | invoice subtotal                                                                        |
 | **line_items**                     | *LineItem[]* | An array of line items as defined below                                                 |
 
 ### Line Item

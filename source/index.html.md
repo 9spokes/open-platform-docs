@@ -19,27 +19,29 @@ includes:
   - accounting/index
   - accounting/bills
   - accounting/invoices
-  - accounting/cards
-  - accounting/contacts
-  - accounting/timeline-balances
+  - accounting/products
+  #- accounting/cards
+  #- accounting/contacts
+  - accounting/trial-balance
+  - accounting/business
   # - accounting/goods-services-transaction
-  - accounting/tax-rates
+  # - accounting/tax-rates
   # accounting/organisation
   - banking/index
   - banking/accounts
   - hr/index
-  - hr/leaves
-  - hr/pay-run-summary
-  - hr/staff-wages
+  #- hr/leaves
+  #- hr/pay-run-summary
+  #- hr/staff-wages
   - pos/index
-  - pos/product
-  - pos/stockItems
+  #- pos/product
+  #- pos/stockItems
   - social_marketing/index
-  - social_marketing/social-marketing
+  #- social_marketing/social-marketing
   - email_marketing/index
-  - email_marketing/email-marketing
+  #- email_marketing/email-marketing
   - web_analytics/index
-  - web_analytics/web-analytics
+  #- web_analytics/web-analytics
 
 search: true
   
@@ -141,6 +143,7 @@ Successful responses yield a HTTP status code of `200` and a JSON body similar t
 ```json
 {
   "status": "ok",
+  "correlationId": "daf07c66-c954-4853-ab5d-01c7b29b80a9",  
   "details": {
     // data
   }
@@ -162,11 +165,82 @@ API requests that could not be processed will carry a HTTP code that is greater 
 ```json
 {
   "status": "err",
+  "correlationId": "daf07c66-c954-4853-ab5d-01c7b29b80a9",
   "message": "This connection does not exist"
 }
 ```
 
-The `message` key is always a string explaining the nature of the problem that was encountered.
+### Correlation ID
+
+A `correlationId` is included in both successful and error response. Please provide this ID if you are contacting 9Spokes support regarding an issue.
+
+## Querying
+
+The 9Spokes API uses OData format to filter response data. 
+
+<aside class="warning">The below queries will only work when requesting for connected app's data.</aside>
+
+### Filter ($filter)  
+
+The `$filter` query option allow you to filter the set of data based on the properties available.
+
+| Operator  | Description             |
+| --------- | ----------------------- |
+| **eq**    | *Equal*                 |
+| **ne**    | *Not equal*             |
+| **gt**    | *Greater than*          |
+| **ge**    | *Greater than or equal* |
+| **lt**    | *Less than*             |
+| **le**    | Less than or equal*     |
+| **and**   | *Logical and*           |
+| **or**    | *Logical or*            |
+
+
+- Single quotes for string type values.
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_status eq 'UNPAID'`</code>
+
+- Current support format for date is **(yyyy-mm-dd)** 
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_date eq 08-11-2021`</code>
+
+
+### Orderby ($orderby)  
+
+The `$orderBy` query option allow you to order the set of datas based on the property name provided.
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$orderBy=data.transaction_date</code>
+
+
+### Select ($select)  
+
+The `$select` query option allows requesting a specific set of properties.
+
+Atleast 2 property names must be provided.
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$select=data.transaction_date,data.transaction_status</code>
+
+## Pagination
+
+The 9Spokes API default page size is set to **10** however can be modified.
+A response will have `total` property showing specified number of results.
+
+> A typical success response of data
+
+```json
+{
+  "results": [...],
+  "total": 50,
+}
+```
+- To set page size use `$top` to get specific set number of data.
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5</code>
+
+- To paginate through the list of results, use `$skip`.
+
+<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5&$skip=5</code>
+
 
 ## Using Postman
 

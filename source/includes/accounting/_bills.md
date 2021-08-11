@@ -13,81 +13,64 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 ```json
 {
-    "connection_id" : "52684382-abff-45fa-a3f2-ced175adfe61",
-    "company" : "69894a02-9c03-40ac-a06a-ee6e4b38c6fb",
-    "datasource" : "bills",
-    "osp" : "myob-accountright",
-    "type" : "bill",
-    "updated" : "2021-01-25T03:14:36Z",
-    "cycle" : "day",
-    "currency" : "NZD",
-    "data" : [ 
-        {
-            "transaction_outstanding_amount" : 1026.13,
-            "currency_rate" : 0.589596,
-            "transaction_date" : "2021-01-22T00:00:00.000Z",
-            "transaction_due_date" : "2021-02-20T12:00:00.000Z",
-            "transaction_status" : "UNPAID",
-            "transaction_reference" : "00001482",
-            "related_reference" : "6df6db72-77d6-4505-8fb6-b4594e057855",
-            "party_identifier" : "806ecb77-eece-47ac-9dd5-6a1f208681c7",
-            "transaction_currency" : "NZD",
-            "transaction_gross_value" : 1026.13,
-            "transaction_net_value" : 1026.13,
-            "line_items" : [ 
-                {
-                    "product_name" : "Plate",
-                    "system_id" : "e54a0375-a275-4224-b71b-71afacae7213",
-                    "item_identifier" : "N/A",
-                    "item_category" : "N/A",
-                    "item_type" : "N/A",
-                    "item_net_unit_sale_value" : 1017.645981,
-                    "item_net_unit_discount_value" : 1017.645981,
-                    "item_unit_tax_value" : 1017.645981,
-                    "item_price_list_reference" : "N/A",
-                    "item_total_gross_value" : 1017.65,
-                    "item_total_net_value" : 1017.65,
-                    "item_total_tax_value" : 1017.65
-                }, 
-                {
-                    "product_name" : "Packaging",
-                    "system_id" : "e1924f89-55db-475c-bd50-ed0873b6d047",
-                    "item_identifier" : "N/A",
-                    "item_category" : "N/A",
-                    "item_type" : "N/A",
-                    "item_net_unit_sale_value" : 8.480383,
-                    "item_net_unit_discount_value" : 8.480383,
-                    "item_unit_tax_value" : 8.480383,
-                    "item_price_list_reference" : "N/A",
-                    "item_total_gross_value" : 8.48,
-                    "item_total_net_value" : 8.48,
-                    "item_total_tax_value" : 8.48
-                }
-            ]
-        }
-    ]
+  "results": [
+    {
+      "data": {
+        "transaction_outstanding_amount": 1026.13,
+        "currency_rate": 0.589596,
+        "transaction_date": "2021-01-22T00:00:00.000Z",
+        "transaction_due_date": "2021-02-20T12:00:00.000Z",
+        "transaction_status": "UNPAID",
+        "transaction_reference": "00001482",
+        "related_reference": "6df6db72-77d6-4505-8fb6-b4594e057855",
+        "party_identifier": "806ecb77-eece-47ac-9dd5-6a1f208681c7",
+        "transaction_currency": "NZD",
+        "transaction_gross_value": 1026.13,
+        "transaction_net_value": 1026.13,
+        "line_items": [
+          {
+            "product_name": "Plate",
+            "system_id": "e54a0375-a275-4224-b71b-71afacae7213",
+            "item_identifier": "N/A",
+            "item_category": "N/A",
+            "item_type": "N/A",
+            "item_net_unit_sale_value": 1017.645981,
+            "item_net_unit_discount_value": 1017.645981,
+            "item_unit_tax_value": 1017.645981,
+            "item_price_list_reference": "N/A",
+            "item_total_gross_value": 1017.65,
+            "item_total_net_value": 1017.65,
+            "item_total_tax_value": 1017.65
+          },
+          {
+            "product_name": "Packaging",
+            "system_id": "e1924f89-55db-475c-bd50-ed0873b6d047",
+            "item_identifier": "N/A",
+            "item_category": "N/A",
+            "item_type": "N/A",
+            "item_net_unit_sale_value": 8.480383,
+            "item_net_unit_discount_value": 8.480383,
+            "item_unit_tax_value": 8.480383,
+            "item_price_list_reference": "N/A",
+            "item_total_gross_value": 8.48,
+            "item_total_net_value": 8.48,
+            "item_total_tax_value": 8.48
+          }
+        ]
+      },
+      ...
+    }
+  ]
 }
+
+
 ```
 
-<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/bills</code>
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/data/bills</code>
 
-The `bills` endpoint for a connection returns an array of bills.  Each record contains a *metadata* envelope and a `data` key.  The `data` key for bills is always an array of bills.
+The `bills` endpoint for a connection returns an array of bills. The `data` is the key for a bill.
 
 Individual line items can be found for each bill under the `line_items` key.
-
-### Metadata
-
-| Field             | Data Type        | Description                                         |
-| :---------------- | ---------------- | --------------------------------------------------- |
-| **company**       | *uuid*           | The ID of the company owning the connection         |
-| **connection_id** | *uuid*           | The ID of the connection                            |
-| **datasource**    | `bills`          | Always `bills` for bills                            |
-| **osp**           | *string*         | The name of the app provider                        |
-| **updated**       | *date*           | The time and date when this record was last updated |
-| **cycle**         | `day` or `month` | Whether this data is pulled daily or monthly        |
-| **currency**      | *string*         | The ISO4217 code for the currency for this bill     |
-| **data**          | *Bill[]*         | An array of bills as defined below                  |
-
 ### Bill
 
 | Field                              | Data Type    | Description                                                                          |
