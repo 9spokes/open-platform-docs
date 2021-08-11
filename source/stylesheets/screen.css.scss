@@ -672,6 +672,14 @@ html, body {
       content: "DELETE";
     }
   }
+
+  &-example {
+    background-color: rgb(87, 84, 84);
+    color: white;
+    &::after {
+      content: "Example:";
+    }
+  }
 }
 
 

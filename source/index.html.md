@@ -198,18 +198,18 @@ The `$filter` query option allow you to filter the set of data based on the prop
 
 - Single quotes for string type values.
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_status eq 'UNPAID'`</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_status eq 'UNPAID'</code>
 
 - Current support format for date is **(yyyy-mm-dd)** 
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_date eq 08-11-2021`</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_date eq 08-11-2021</code>
 
 
 ### Orderby ($orderby)  
 
 The `$orderBy` query option allow you to order the set of datas based on the property name provided.
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$orderBy=data.transaction_date</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$orderBy=data.transaction_date</code>
 
 
 ### Select ($select)  
@@ -218,7 +218,7 @@ The `$select` query option allows requesting a specific set of properties.
 
 Atleast 2 property names must be provided.
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$select=data.transaction_date,data.transaction_status</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$select=data.transaction_date,data.transaction_status</code>
 
 ## Pagination
 
@@ -235,11 +235,11 @@ A response will have `total` property showing specified number of results.
 ```
 - To set page size use `$top` to get specific set number of data.
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5</code>
 
 - To paginate through the list of results, use `$skip`.
 
-<span class="api api-get"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5&$skip=5</code>
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5&$skip=5</code>
 
 
 ## Using Postman
