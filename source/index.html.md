@@ -176,13 +176,13 @@ A `correlationId` is included in both successful and error response. Please prov
 
 ## Querying
 
-The 9Spokes API uses OData format to filter response data. 
+The 9Spokes API uses OData (Open Data Protocol) format to filter response data. 
 
-<aside class="warning">The below queries will only work when requesting for connected app's data.</aside>
+<aside class="warning">The below queries will only work when requesting connected app data.</aside>
 
 ### Filter ($filter)  
 
-The `$filter` query option allow you to filter the set of data based on the properties available.
+The `$filter` query option allows you to filter data sets based on the properties available. 
 
 | Operator  | Description             |
 | --------- | ----------------------- |
@@ -191,7 +191,7 @@ The `$filter` query option allow you to filter the set of data based on the prop
 | **gt**    | *Greater than*          |
 | **ge**    | *Greater than or equal* |
 | **lt**    | *Less than*             |
-| **le**    | Less than or equal*     |
+| **le**    | *Less than or equal*    |
 | **and**   | *Logical and*           |
 | **or**    | *Logical or*            |
 
@@ -200,30 +200,28 @@ The `$filter` query option allow you to filter the set of data based on the prop
 
 <span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_status eq 'UNPAID'</code>
 
-- Current support format for date is **(yyyy-mm-dd)** 
+- The current supported format for dates is **(yyyy-mm-dd)** 
 
-<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_date eq 08-11-2021</code>
-
+<span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$filter=data.transaction_date eq 2021-08-11</code>
 
 ### Orderby ($orderby)  
 
-The `$orderBy` query option allow you to order the set of datas based on the property name provided.
+The `$orderBy` query option allows you to order data sets based on the property name provided. 
 
 <span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$orderBy=data.transaction_date</code>
 
 
 ### Select ($select)  
 
-The `$select` query option allows requesting a specific set of properties.
+The `$select` query option allows you to request a specific set of properties. 
 
-Atleast 2 property names must be provided.
+At least 2 property names must be provided.
 
 <span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$select=data.transaction_date,data.transaction_status</code>
 
 ## Pagination
 
-The 9Spokes API default page size is set to **10** however can be modified.
-A response will have `total` property showing specified number of results.
+The 9Spokes API default page is set to size 10, however this can be modified. A response will have total properties showing a specified number of results. 
 
 > A typical success response of data
 
@@ -233,7 +231,7 @@ A response will have `total` property showing specified number of results.
   "total": 50,
 }
 ```
-- To set page size use `$top` to get specific set number of data.
+- To set the page size and get specific number of results, use `$top`. 
 
 <span class="api api-example"></span> <code>/companies/{companyId}/connections/{connectionId}/data/invoices?$top=5</code>
 
