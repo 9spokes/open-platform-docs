@@ -221,7 +221,7 @@ At least 2 property names must be provided.
 
 ## Pagination
 
-The 9Spokes API default page is set to size 10, however this can be modified. A response will have total properties showing a specified number of results. 
+The 9Spokes API default page is set to size 10, however this can be modified. A response will have `total` property showing a specified number of results. 
 
 > A typical success response of data
 
