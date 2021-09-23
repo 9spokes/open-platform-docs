@@ -5,50 +5,55 @@ A leave is time-off requested to a company by an employee. Following is the data
 > Retrieving the list of leaves for a connection is done by querying the `leaves` endpoint for that connection
 
 ```sh
-$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/leaves \
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/data/leaves \
     -H "Authorization: ${API_KEY}"
 ```
 
 > The response is an array of leaves as seen below.
 
 ```json
-{ 
-    "leaves": [
-        {
-            "id": "314117",
-            "type": "SICK",
-            "status": "PENDING",
-            "start_date": "2021-01-15T00:00:00.000Z",
-            "end_date": "2021-01-19T00:00:00.000Z",           
-            "application_url": "https://www.talenox.com/apps/leave/applications/314117",
-            "employee_id":"176772",
-            "employee_name":"Kia Solo",
-            "dates": [  
-                "2021-01-15T00:00:00.000Z", 
-                "2021-01-16T00:00:00.000Z", 
-                "2021-01-17T00:00:00.000Z", 
-                "2021-01-18T00:00:00.000Z", 
-                "2021-01-19T00:00:00.000Z" 
-            ]              
-        },
-        {
-            "id": "252826",
-            "type": "PAID",
-            "status": "APPROVED",
-            "start_date": "2020-07-31T00:00:00.000Z",
-            "end_date": "2020-08-03T00:00:00.000Z",       
-            "application_url": "https://www.talenox.com/apps/leave/applications/252826",
-            "employee_id":"176772",
-            "employee_name":"Obigud Kenobee",
-            "dates": [  
-                "2020-07-31T00:00:00.000Z", 
-                "2020-08-01T00:00:00.000Z", 
-                "2020-08-02T00:00:00.000Z", 
-                "2020-08-03T00:00:00.000Z" 
-            ]              
-        },       
-    ]
+{
+  "results": [
+    {
+      "leave": {
+        "id": "314117",
+        "type": "SICK",
+        "status": "PENDING",
+        "start_date": "2021-01-15T00:00:00.000Z",
+        "end_date": "2021-01-19T00:00:00.000Z",
+        "application_url": "https://www.talenox.com/apps/leave/applications/314117",
+        "employee_id": "176772",
+        "employee_name": "Kia Solo",
+        "dates": [
+          "2021-01-15T00:00:00.000Z",
+          "2021-01-16T00:00:00.000Z",
+          "2021-01-17T00:00:00.000Z",
+          "2021-01-18T00:00:00.000Z",
+          "2021-01-19T00:00:00.000Z"
+        ]
+      }
+    },
+    {
+      "leave": {
+        "id": "252826",
+        "type": "PAID",
+        "status": "APPROVED",
+        "start_date": "2020-07-31T00:00:00.000Z",
+        "end_date": "2020-08-03T00:00:00.000Z",
+        "application_url": "https://www.talenox.com/apps/leave/applications/252826",
+        "employee_id": "176772",
+        "employee_name": "Obigud Kenobee",
+        "dates": [
+          "2020-07-31T00:00:00.000Z",
+          "2020-08-01T00:00:00.000Z",
+          "2020-08-02T00:00:00.000Z",
+          "2020-08-03T00:00:00.000Z"
+        ]
+      }
+    }
+  ]
 }
+
 
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/leaves</code>

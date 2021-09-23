@@ -1,8 +1,8 @@
-## Invoices
+## Sales
 
-Following is the data specification for a invoice that is extracted from accounting OSPs
+Following is the data specification for a sale that is extracted from POS OSPs
 
-> Retrieving the list of invoices for a connection is done by querying the `invoices` endpoint for that connection
+> Retrieving the list of sales for a connection is done by querying the `sales` endpoint for that connection
 
 ```sh
 $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/data/sales \
@@ -17,9 +17,9 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
     {
       "data": {
         "currency_rate": 1.0,
-        "transaction_gross_value": 17765.0,
-        "transaction_net_value": 17000.0,
-        "transaction_tax_value": 765.0,
+        "transaction_gross_value": 3000.0,
+        "transaction_net_value": 2800.0,
+        "transaction_tax_value": 200.0,
         "transaction_date": "2021-04-05T00:00:00.000Z",
         "transaction_due_date": "2021-05-05T00:00:00.000Z",
         "transaction_reference": "070",
@@ -27,16 +27,16 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
         "transaction_status": "PAID",
         "line_items": [
           {
-            "product_name": "Samsung Galaxy S6 10.5* Tab",
-            "item_category": "revenue-transaction",
-            "item_type": "invoice",
+            "product_name": "Dining Chair",
+            "item_category": "sales-revenue",
+            "item_type": "goods-service",
             "item_quantity": 10,
-            "item_identifier": "Samsung Galaxy S6 10.5* Tab",
-            "item_net_unit_sale_value": 1700.0,
-            "item_total_net_value": 16235.0,
-            "item_total_tax_value": 765.0,
-            "item_total_gross_value": 17000.0,
-            "system_id": "132516"
+            "item_identifier": "Dining Chair 1029",
+            "item_net_unit_sale_value": 280.0,
+            "item_total_net_value": 2800.0,
+            "item_total_tax_value": 200.0,
+            "item_total_gross_value": 3000.0,
+            "system_id": "5287889d-c45b-4a65-9ef6-68494d4fdeb0"
           }
         ]
       }
@@ -48,11 +48,11 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 ```
 
-<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/data/invoices</code>
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/data/sales</code>
 
-The `invoices` endpoint for a connection returns an array of invoices. The `data` is the key for an invoice.
+The `sales` endpoint for a connection returns an array of sales. The `data` is the key for a sale.
 
-Individual line items can be found for each invoice under the `line_items` key.
+Individual line items can be found for each sale under the `line_items` key.
 ### Invoice
 
 | Field                              | Data Type    | Description                                                                             |

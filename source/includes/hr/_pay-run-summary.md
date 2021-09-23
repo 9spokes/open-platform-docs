@@ -5,7 +5,7 @@ Summarized pay run of different periods. Following is the data specification for
 > Retrieving pay run summary for a connection is done by querying the `payRunSummary` endpoint for that connection
 
 ```sh
-$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/payRunSummary \
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/data/payRunSummary \
     -H "Authorization: ${API_KEY}"
 ```
 
@@ -13,23 +13,27 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 
 ```json
-{ 
-    "pay_run_summary": [
-        {
-            "pay_period": "Semi-monthly",
-            "start_date": "2019-10-14T00:00:00.000Z",
-            "end_date": "2019-10-29T00:00:00.000Z",
-            "hours": 120.0,
-            "gross_pay": 7000.0               
-        },
-        {
-            "pay_period": "Semi-monthly",
-            "start": "2019-09-30T00:00:00.000Z",
-            "end": "2019-10-13T00:00:00.000Z",
-            "hours": 120.0,
-            "gross_pay": 9000.0                
-        }      
-    ]
+{
+  "results": [
+    {
+      "pay_run_summary": {
+        "pay_period": "Semi-monthly",
+        "start_date": "2019-10-14T00:00:00.000Z",
+        "end_date": "2019-10-29T00:00:00.000Z",
+        "hours": 120.0,
+        "gross_pay": 7000.0
+      }
+    },
+    {
+      "pay_run_summary": {
+        "pay_period": "Semi-monthly",
+        "start": "2019-09-30T00:00:00.000Z",
+        "end": "2019-10-13T00:00:00.000Z",
+        "hours": 120.0,
+        "gross_pay": 9000.0
+      }
+    }
+  ]
 }
 
 ```

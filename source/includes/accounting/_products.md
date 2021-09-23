@@ -5,7 +5,7 @@ This is the specification for Product Items. It is in JSON formam. Following is 
 > Retrieving the products data for a connection is done by querying the `products` endpoint for that connection
 
 ```sh
-$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/data/products \
+$ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connections/52684382-abff-45fa-a3f2-ced175adfe61/data/data/products \
     -H "Authorization: ${API_KEY}"
 ```
 

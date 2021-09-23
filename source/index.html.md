@@ -30,18 +30,20 @@ includes:
   - banking/index
   - banking/accounts
   - hr/index
-  #- hr/leaves
-  #- hr/pay-run-summary
-  #- hr/staff-wages
+  - hr/leaves
+  - hr/pay-run-summary
+  - hr/staff-wages
   - pos/index
-  #- pos/product
-  #- pos/stockItems
+  - pos/products
+  - pos/sales
+  # - pos/stockItems
   - social_marketing/index
-  #- social_marketing/social-marketing
+  - social_marketing/social-marketing
   - email_marketing/index
-  #- email_marketing/email-marketing
+  - email_marketing/campaigns
+  - email_marketing/growth_history
   - web_analytics/index
-  #- web_analytics/web-analytics
+  - web_analytics/web-analytics
 
 search: true
   

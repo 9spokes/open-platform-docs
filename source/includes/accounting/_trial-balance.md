@@ -54,14 +54,14 @@ A timeline/trial balance is a list of all the general ledger accounts contained 
 
 ### Data Schema
 
-| Field                | Data Type              | Description                                                                                                                   |
-| :------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| **account_identifier** | *string*               | Account ID                                                                                                                  |
-| **account_name**       | *string*               | Account name                                                                                                                |
-| **account_code**       | *string*               | The chart of account codes                                                                                                  |
-| **account_type**       | *string*               | The account type (`bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term`, `current_accounts_receivable`.`current_account_payable`)                     |
-| **account_category**   | *string*               | The account category (`assets`, `equity`, `expense`, `liability`, `revenue`)                                                |
-| **account_currency**   | *string*               | Currency of the account                                                                                                     |
-| **account_status**     | *string*               | Whether the account is active or not                                                                                        |
-| **value_type**         | *string*               | Debit/Credit                                                                                                                |
-| **total_value**        | *number*               | The value of the account                                                                                                    |
+| Field                  | Data Type | Description                                                                                                                                                      |
+|:-----------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **account_identifier** | *string*  | Account ID                                                                                                                                                       |
+| **account_name**       | *string*  | Account name                                                                                                                                                     |
+| **account_code**       | *string*  | The chart of account codes                                                                                                                                       |
+| **account_type**       | *string*  | The account type (`bank`, `current`, `equity`, `fixed`, `overheads`, `payroll`, `sales`, `tax`, `term`, `current_accounts_receivable`.`current_account_payable`) |
+| **account_category**   | *string*  | The account category (`assets`, `equity`, `expense`, `liability`, `revenue`)                                                                                     |
+| **account_currency**   | *string*  | Currency of the account                                                                                                                                          |
+| **account_status**     | *string*  | Whether the account is active or not                                                                                                                             |
+| **value_type**         | *string*  | Debit/Credit                                                                                                                                                     |
+| **total_value**        | *number*  | The value of the account                                                                                                                                         |

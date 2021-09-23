@@ -158,3 +158,70 @@ Removing a connection for a given company is done by issuing a `DELETE` request 
 <aside class="warning">
 Deleting a connection removes all the data associated with that company, it's irreversible!
 </aside>
+
+## Get Connection Data Status
+
+> Get a connection data status for company ID: `9091a260-1292-4874-bbe5-3693a341d332` with connection ID: `087cd170-ec96-4898-bf97-2ecf82ab7cc1`
+
+```sh
+# The example below assumes you have the API_ROOT and API_KEY environment variables set
+$ curl https://${API_ROOT}/companies/9091a260-1292-4874-bbe5-3693a341d332/connections/087cd170-ec96-4898-bf97-2ecf82ab7cc1/status \
+    -X GET \
+    -H "Authorization: ${API_KEY}"
+```
+
+> The operation `status` is either `ok` or `err`
+
+```json
+{
+    "status": "ok",
+    "correlationId": "e9138503-c8a3-412e-8f68-403adc547b1e",
+    "details": [
+        {
+            "datasource": "products",
+            "total": 1,
+            "completed": 1,
+            "last_updated": "2021-09-16T23:41:36.814Z"
+        },
+        {
+            "datasource": "bank_accounts",
+            "total": 1,
+            "completed": 1,
+            "last_updated": "2021-09-22T12:00:45.327Z"
+        },
+        {
+            "datasource": "invoices",
+            "total": 395,
+            "completed": 395,
+            "last_updated": "2021-09-23T04:00:41.429Z"
+        },
+        {
+            "datasource": "bills",
+            "total": 395,
+            "completed": 395,
+            "last_updated": "2021-09-23T04:00:41.403Z"
+        },
+        {
+            "datasource": "trial_balance",
+            "total": 96,
+            "completed": 96,
+            "last_updated": "2021-09-22T13:45:45.575Z"
+        },
+        {
+            "datasource": "business",
+            "total": 1,
+            "completed": 1,
+            "last_updated": "2021-09-16T23:41:35.973Z"
+        }
+    ]
+} 
+```
+
+<span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/status</code>
+
+Getting data status of a connection for a given company is done by issuing a `GET` request and specifying both the `connection` and `company` in the path.
+
+| Field          | Location | Type     | Description                        |
+| :------------- | -------- | -------- | ---------------------------------- |
+| **company**    | Path     | *string* | The ID of the company              |
+| **connection** | Path     | *string* | The ID of the connection to remove |
