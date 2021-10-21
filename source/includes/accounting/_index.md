@@ -9,7 +9,7 @@ The following apps are currently supported
 <img src="/images/apps/freeagent/icon.svg" alt="Freeagent" class="app-logo" />
 <img src="/images/apps/wave/icon.svg" alt="Wave" class="app-logo" />
 <img src="/images/apps/xero/icon.svg" alt="Xero" class="app-logo" />
-<img src="/images/apps/freshbooks/icon.png" alt="Freshbooks" class="app-logo" />
-<img src="/images/apps/kashflow/icon.svg" alt="Kashflow" class="app-logo" />
+<img src="/images/apps/freshbooks/icon.svg" alt="Freshbooks" class="app-logo" />
+<img src="/images/apps/kashflow/icon.png" alt="Kashflow" class="app-logo" />
 <img src="/images/apps/clearbooks/icon.png" alt="Clearbooks" class="app-logo" />
 <img src="/images/apps/expensify/icon.svg" alt="Expensify" class="app-logo" />
