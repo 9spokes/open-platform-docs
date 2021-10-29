@@ -13,4 +13,5 @@ The following apps are currently supported
 <img src="/images/apps/kashflow/icon.png" alt="Kashflow" class="app-logo" />
 <img src="/images/apps/clearbooks/icon.png" alt="Clearbooks" class="app-logo" />
 <img src="/images/apps/pandle/icon.webp" alt="Pandle" class="app-logo" />
+<img src="/images/apps/reckon/icon.png" alt="Reckon" class="app-logo" />
 <img src="/images/apps/expensify/icon.svg" alt="Expensify" class="app-logo" />
