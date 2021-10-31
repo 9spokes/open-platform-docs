@@ -10,7 +10,7 @@ The following apps are currently supported
 <img src="/images/apps/wave/icon.svg" alt="Wave" class="app-logo" />
 <img src="/images/apps/xero/icon.svg" alt="Xero" class="app-logo" />
 <img src="/images/apps/freshbooks/icon.svg" alt="Freshbooks" class="app-logo" />
-<img src="/images/apps/kashflow/icon.png" alt="Kashflow" class="app-logo" />
+<img src="/images/apps/kashflow/icon.svg" alt="Kashflow" class="app-logo" />
 <img src="/images/apps/clearbooks/icon.png" alt="Clearbooks" class="app-logo" />
 <img src="/images/apps/pandle/icon.svg" alt="Pandle" class="app-logo" />
 <img src="/images/apps/reckon/icon.svg" alt="Reckon" class="app-logo" />
