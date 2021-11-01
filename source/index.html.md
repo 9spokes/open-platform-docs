@@ -21,7 +21,7 @@ includes:
   - accounting/invoices
   - accounting/products
   #- accounting/cards
-  #- accounting/contacts
+  - accounting/contacts
   - accounting/trial-balance
   - accounting/business
   # - accounting/goods-services-transaction

@@ -73,7 +73,7 @@ Below is the content of the `business` object.
 | :---------------------- | :---------- | :----------------------------------     |
 | **country**             | *string*    | country                                 |
 | **line1**               | *string*    | address line 1                          |
-| **line1**               | *string*    | address line 2                          |
+| **line2**               | *string*    | address line 2                          |
 | **postal_code**         | *string*    | postal code                             |
 | **type**                | *string*    | type of the address                     |
 
