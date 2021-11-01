@@ -14,65 +14,61 @@ $ curl https://${API_ROOT}/companies/69894a02-9c03-40ac-a06a-ee6e4b38c6fb/connec
 
 ```json
 {
-    "contacts": [
+    "results": [
         {
-            "type" : "CUSTOMER",
-            "id": "689336287289",          
-            "email":"k.h@gmail.com",       
-            "name": "Katherine Hammes",
-            "phone": "0321 15151 454",
-            "addresses":[
-                {
-                    "type":"BILLING",
-                    "country":"New Zealand",
-                    "postal_code":"1010",
-                    "line1":"88 high Road",
-                    "line2":"Auckland Central, Auckland 1010" 
-                },
-                {
-                    "type":"DELIVERY",
-                    "country":"New Zealand",
-                    "postal_code":"0622",
-                    "line1":"1-11 Greenwood road",
-                    "line2":"Hauraki, auckland" 
-                }                
-            ]
-        },
-        {           
-            "type" : "SUPPLIER",
-            "id": "122372889",
-            "email":"hrdsteel@gmail.com",       
-            "name": "Hard steel",
-            "phone": "124 546 84123",
-            "addresses":[
-                {
-                    "type":"BILLING",
-                    "country":"Australia",
-                    "postal_code":"1999",
-                    "line1":"29 flicker street",
-                    "line2":"New South Wales" 
-                },           
-            ]
+            "contact": {
+                "id": "295c0eb6-7844-4ee7-a2ed-6c1a69fa9424",
+                "company_name": "Lifestyle Design",
+                "contact_name": "James",
+                "email": "j.dg@example.com",
+                "first_name": "James",
+                "last_name": "De Grasse",
+                "phone": "(021) 120 00000",
+                "type": "customer and supplier",
+                "addresses": [
+                    {
+                        "city": "Auckland",
+                        "country": "NZ",
+                        "line1": "12 Scott Road",
+                        "line2": "Onehunga"
+                    },
+                    {
+                        "city": "Auckland",
+                        "country": "NZ",
+                        "line1": "28 Esplanade Street",
+                        "line2": "Papakura"
+                    }
+                ],
+            }
         }
     ]
 }
 ```
 <span class="api api-get"></span> <code>/companies/{company}/connections/{connection}/contacts</code>
 
-### Data Schema
+### Contact
 
-| Field           | Data Type | Description                                                                                  |
-|-----------------|-----------|----------------------------------------------------------------------------------------------|
-| **contacts**    | *array*   | Array of contacts                                                                            |
-| **type**        | *string*  | The contact type, either: <ul><li>`CUSTOMER`</li><li>`SUPPLIER`</li><li>`OTHER`</li></ul> |
-| **id**          | *string*  | The unique identifier for the contact in the platform                                        |
-| **email**       | *string*  | Email address of the contact                                                         |
-| **name**        | *string*  | Name of the contact                                                     |
-| **phone**       | *string*  | Phone number of the contact                                                                   |
-| ***addresses*** | *array*   | Array of addresses for the contact                                                           |
-| **type**        | *array*   | The address type, either: <ul><li>`BILLING`</li><li>`DELIVERY`</li><li>`OTHER`</li></ul>  |
-| **country**     | *array*   | Country of the contact address                                                               |
-| **postal_code** | *array*   | Postal code for the contact address                                                          |
-| **line1**       | *array*   | Line 1 of the contact address                                                                |
-| **line2**       | *array*   | Line 2 of the contact address                                                                |
+Below is the content of the `contact` object.
 
+| Field            | Data Type | Description                                                                                    |
+| :----------------| :---------| :--------------------------------------------------------------------------------------------- |
+| **type**         | *string*  | The contact type, either: <ul><li>`customer`</li><li>`customer and supplier`</li></ul>         |
+| **id**           | *string*  | The unique identifier for the contact in the platform                                          |
+| **first_name**   | *string*  | Name of the contact                                                                            |
+| **last_name**    | *string*  | Name of the contact                                                                            |
+| **company_name** | *string*  | Website of the contact                                                                         |
+| **phone**        | *string*  | Phone number of the contact                                                                    |
+| **email**        | *string*  | Email address of the contact                                                                   |
+| **website**      | *string*  | Website of the contact                                                                         |
+| **vatin**        | *string*  | VAT number of the contact                                                                      |
+
+### address
+
+| Field                   | Data Type   | Description                         |
+| :---------------------- | :---------- | :---------------------------------- |
+| **country**             | *string*    | Country                             |
+| **city**                | *string*    | City                                |
+| **line1**               | *string*    | Address, line 1                     |
+| **line2**               | *string*    | Address, line 2                     |
+| **postal_code**         | *string*    | Postal code                         |
+| **type**                | *string*    | Type of the address                 |
