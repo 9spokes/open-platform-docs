@@ -63,7 +63,7 @@ $ curl https://${API_ROOT}/companies \
 }
 ```
 
-<span class="api api-get"></span> <code>/companies/{company}</code>
+<span class="api api-get"></span> <code>/companies</code>
 
 Retrieving all the companies is done using a `GET` request to the `companies` endpoint.
 
