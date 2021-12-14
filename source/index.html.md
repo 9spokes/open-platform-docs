@@ -8,7 +8,7 @@ language_tabs:
 toc_footers:
   - <a href='https://www.9spokes.com/app-partners'>9Spokes</a>
   - <a href='https://www.9spokes.com/terms-and-conditions'>Terms of Use</a>
-  - <a href='https://sandbox.api.9spokes.com/'>Try 9Spokes Open</a>
+  - <a href='https://sandbox.api.9spokes.com/portal/signup'>Try 9Spokes Open</a>
 
 includes:
   - organisation/index
