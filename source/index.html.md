@@ -244,7 +244,7 @@ The 9Spokes API default page is set to size 10, however this can be modified. A 
 
 ## Using Postman
 
-For convenience, you may download a copy of a pre-defined [Postman collection](https://cms.9spokes.com/assets/uploads/documents/9Spokes-Open-Postman-Collection.json) to help you get started quickly.
+For convenience, you may download a copy of a pre-defined <a href="/resources/9Spokes-Open-Postman-Collection.json" download>Postman collection</a> to help you get started quickly.
 
 You will need to input your own API key by choosing the folder-level _Authorization_ (9Spokes Open > Authorization) and inputing a key in the `Value` field.
 

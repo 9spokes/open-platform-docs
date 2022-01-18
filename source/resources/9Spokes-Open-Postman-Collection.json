@@ -1,0 +1,318 @@
+{
+  "info": {
+    "_postman_id": "65823d79-6d2b-4aa2-8c17-9868e808489c",
+    "name": "9Spokes Open",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Companies",
+      "item": [
+        {
+          "name": "Get Companies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{ODP_URL}}/companies"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Company",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "try {\r",
+                  "    const body = JSON.parse(responseBody);\r",
+                  "    if (body.status === \"ok\") {\r",
+                  "        if (body.details && body.details.id) {\r",
+                  "            console.log(`Setting ODP_COMPANY to ${body.details.id}`)\r",
+                  "             postman.setEnvironmentVariable(\"ODP_COMPANY\", body.details.id)\r",
+                  "        }\r",
+                  "    }\r",
+                  "} catch (e) {\r",
+                  "    console.error(`failed to parse body: ${e.message}`)\r",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "9Socks",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{ODP_URL}}/companies"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Company",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{ODP_URL}}/companies/{{ODP_COMPANY}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Organization",
+      "item": [
+        {
+          "name": "Get Redirect URL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{ODP_URL}}/organization/redirect_url"
+          },
+          "response": []
+        },
+        {
+          "name": "Set Redirect URL",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "redirect_url",
+                  "value": "https://jwt.ms",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{ODP_URL}}/organization/redirect_url"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Apps",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{ODP_URL}}/organization/apps"
+          },
+          "response": []
+        },
+        {
+          "name": "Set App",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "client_id",
+                  "value": "yX0Dj1vOpfQUEJNhLJS5jA",
+                  "type": "text"
+                },
+                {
+                  "key": "client_secret",
+                  "value": "4yhVzubx9x__HWpttCAbog",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{ODP_URL}}/organization/apps/{{ODP_APP}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete App",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "client_id",
+                  "value": "yX0Dj1vOpfQUEJNhLJS5jA",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "client_secret",
+                  "value": "4yhVzubx9x__HWpttCAbog",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": "{{ODP_URL}}/organization/apps/{{ODP_APP}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Connections",
+      "item": [
+        {
+          "name": "Get Connections",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{ODP_URL}}/companies/{{ODP_COMPANY}}/connections"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Connection",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{ODP_URL}}/companies/{{ODP_COMPANY}}/connections/{{ODP_CONNECTION}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Connection",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "try {\r",
+                  "    const body = JSON.parse(responseBody);\r",
+                  "    if (body.status === \"ok\") {\r",
+                  "        if (body.details && body.details.id) {\r",
+                  "            console.log(`Setting ODP_CONNECTION to ${body.details.id}`)\r",
+                  "             postman.setEnvironmentVariable(\"ODP_CONNECTION\", body.details.id)\r",
+                  "        }\r",
+                  "    }\r",
+                  "} catch (e) {\r",
+                  "    console.error(`failed to parse body: ${e.message}`)\r",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "app",
+                  "value": "{{ODP_APP}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{ODP_URL}}/companies/{{ODP_COMPANY}}/connections"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Accounting",
+      "item": [
+        {
+          "name": "Get Trial Balance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{ODP_URL}}/companies/{{ODP_COMPANY}}/connections/{{ODP_CONNECTION}}/data/trial_balance"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Invoices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ODP_URL}}/companies/{{ODP_COMPANY}}/connections/{{ODP_CONNECTION}}/data/invoices?$select=data.transaction_gross_value,data.transaction_reference,data.transaction_status&$filter=data.transaction_status eq UNPAID",
+              "host": ["{{ODP_URL}}"],
+              "path": [
+                "companies",
+                "{{ODP_COMPANY}}",
+                "connections",
+                "{{ODP_CONNECTION}}",
+                "data",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "$select",
+                  "value": "data.transaction_gross_value,data.transaction_reference,data.transaction_status",
+                  "description": "The OData $select parameter limits the keys returned in each object to a comma-separated list of keys."
+                },
+                {
+                  "key": "$filter",
+                  "value": "data.transaction_status eq UNPAID",
+                  "description": "The $filter OData parameter includes only the records that match the expression defined"
+                },
+                {
+                  "key": "$count",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": {
+      "value": "<Your API Key Here>",
+      "key": "Authorization"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "ODP_URL",
+      "value": "https://sandbox.api.9spokes.com"
+    },
+    {
+      "key": "ODP_APP",
+      "value": "freeagent"
+    }
+  ]
+}
