@@ -8,7 +8,7 @@ language_tabs:
 toc_footers:
   - <a href='https://www.9spokes.com/app-partners'>9Spokes</a>
   - <a href='https://www.9spokes.com/terms-and-conditions'>Terms of Use</a>
-  - <a href='https://odp.9spokes.io/'>Try 9Spokes Open</a>
+  - <a href='https://sandbox.api.9spokes.com/portal/signup'>Try 9Spokes Open</a>
 
 includes:
   - organisation/index
@@ -244,7 +244,7 @@ The 9Spokes API default page is set to size 10, however this can be modified. A 
 
 ## Using Postman
 
-For convenience, you may download a copy of a pre-defined [Postman collection](https://cms.9spokes.com/assets/uploads/documents/9Spokes-Open-Postman-Collection.json) to help you get started quickly.
+For convenience, you may download a copy of a pre-defined <a href="/resources/9Spokes-Open-Postman-Collection.json" download>Postman collection</a> to help you get started quickly.
 
 You will need to input your own API key by choosing the folder-level _Authorization_ (9Spokes Open > Authorization) and inputing a key in the `Value` field.
 
