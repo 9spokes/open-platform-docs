@@ -15,3 +15,4 @@ The following apps are currently supported
 <img src="/images/apps/pandle/icon.svg" alt="Pandle" class="app-logo" />
 <img src="/images/apps/reckon/icon.svg" alt="Reckon" class="app-logo" />
 <img src="/images/apps/expensify/icon.svg" alt="Expensify" class="app-logo" />
+<img src="/images/apps/clover/icon.svg" alt="Clover" class="app-logo" />
