@@ -1,5 +1,7 @@
 # Accounting
 
+## Apps
+
 The following apps are currently supported
 
 <img src="/images/apps/sageone/icon.svg" alt="SageOne" class="app-logo" />
@@ -14,4 +16,27 @@ The following apps are currently supported
 <img src="/images/apps/clearbooks/icon.png" alt="Clearbooks" class="app-logo" />
 <img src="/images/apps/pandle/icon.svg" alt="Pandle" class="app-logo" />
 <img src="/images/apps/reckon/icon.svg" alt="Reckon" class="app-logo" />
-<img src="/images/apps/expensify/icon.svg" alt="Expensify" class="app-logo" />
+
+## Datasources
+
+|                   | Account Balances | Accounts | Bank Transactions | Bills | Contacts | Invoices | Organisation | Products | Purchases | Tax Rates | Trial Balances | Profit & Loss|
+|-------------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Billomat          | ✓ | ✓ |  ✓ | ✓ | ✓ | ✓ |
+| Clearbooks        |                  | ✓        |               |                   |   ✓     | ✓        | ✓        |              |          |           |           |                |
+| Debitoor          | ✓ |  ✓ |  ✓ | ✓ | ✓ | ✓ |
+| Exact             |                  |                      |                   |       |          |          |              |          |           |           |                |
+| FastBill          | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| FreeAgent         |                  |✓                        |                  | ✓     |      ✓     | ✓        | ✓            | ✓        |           |     ✓       | ✓              | ✓|
+| Freshbooks        |                  | ✓                     |              ✓     |    ✓   |          |       ✓   | ✓            |      ✓    |          | ✓          | ✓              |✓|
+| QuickBooks        | ✓                | ✓                     | ✓                 | ✓     |       ✓   | ✓        | ✓            | ✓        |      ✓     |       ✓    | ✓              |
+| Kashflow          | ✓                |   ✓                    | ✓                  |       | ✓        | ✓        | ✓            | ✓        |           |   ✓        | ✓              |
+| LexOffice         | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| MYOBAccountRight  |    ✓              |                 ✓     |              ✓     | ✓     |       ✓   | ✓        |              |          |           | ✓         | ✓              |
+| Pandle            |               |     ✓                    |               ✓    |    ✓   | ✓        |       ✓   | ✓            |     ✓     |           |       ✓    |       ✓         |✓|
+| Reckon            |                  | ✓                     |                   | ✓     | ✓        | ✓        | ✓            | ✓        |           |  ✓         | ✓              |
+| SageOne           | ✓                | ✓                     | ✓                 |       |   ✓       | ✓        | ✓            | ✓        | ✓         |      ✓     | ✓              |
+| Sevdesk           | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Stax              |  ✓ |  ✓ |  ✓ | ✓ | ✓ | ✓ |
+| Wave              |                           |    ✓           |                   |       |   ✓       | ✓        |      ✓        |    ✓      |           |  ✓         | ✓              |
+| Xero              | ✓                | ✓                    | ✓                 | ✓     |   ✓       | ✓        | ✓            | ✓        |    ✓       |  ✓         | ✓              |
+| ZohoBooks         |                  |        ✓                 |                   | ✓     |   ✓      | ✓        |              |   ✓       |   ✓        | ✓          |                |
